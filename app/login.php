@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from cryptooapp.netlify.app/temp/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 20:04:39 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -17,23 +13,6 @@
 
 	<!-- Template global css file. Requared all pages -->
 	<link rel="stylesheet" type="text/css" href="css/global.style.css">
-	<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'js/fbevents.js');
-fbq('init', '692589158011169');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -70,8 +49,8 @@ src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript
 						<li class="active">
 							<a href="javascript:void(0);"><img src="img/content/icons/9.png" alt=""><strong>Login/Register</strong> <span class="fa fa-angle-down"></span></a>
 							<ul>
-								<li><a href="login.html" data-loader="show">Login</a></li>
-								<li class="active"><a href="signup.html" data-loader="show">Register</a></li>
+								<li class="active"><a href="login.html" data-loader="show">Login</a></li>
+								<li><a href="signup.html" data-loader="show">Register</a></li>
 								<li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
 							</ul>
 						</li>
@@ -119,7 +98,7 @@ src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript
 			<!-- Header area start -->
 			<header> <!-- extra class no-background -->
 				<a class="go-back-link" href="javascript:history.back();"><i class="fa fa-arrow-left"></i></a>
-				<h1 class="page-title">SIGN UP</h1>
+				<h1 class="page-title">LOGIN</h1>
 				<div class="navi-menu-button">
 					<em></em>
 					<em></em>
@@ -129,14 +108,15 @@ src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript
 			<!-- Header area end -->
 			<!-- Page content start -->
 			<main>
+			
 				<div class="container">
 					<div class="form-divider"></div>
 
 					<div class="form-row">
-						<a href="#" class="button circle block blue mb-15"> <i class="fa fa-facebook"></i> Sign up with FACEBOOK</a>
+						<a href="javascript:void(0);" class="button circle block blue mb-15"> <i class="fa fa-facebook"></i> Login with FACEBOOK</a>
 					</div>
 					<div class="form-row">	
-						<a href="#" class="button circle block red"><i class="fa fa-google"></i> Sign up with GOOGLE</a>
+						<a href="javascript:void(0);" class="button circle block red"><i class="fa fa-google"></i> Login with GOOGLE</a>
 					</div>
 
 					<div class="form-divider"></div>
@@ -145,36 +125,27 @@ src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript
 
 					<div class="form-row-group with-icons">
 						<div class="form-row no-padding">
-							<i class="fa fa-user"></i>
-							<input type="text" name="aaa" class="form-element" placeholder="Username" value="john doe">
-						</div>
-						<div class="form-row no-padding">
 							<i class="fa fa-envelope"></i>
-							<input type="email" name="aaa" class="form-element" placeholder="Email" value="johndoe@example.com">
+							<input type="email" name="aaa" class="form-element" placeholder="Username or Email">
 						</div>
 						<div class="form-row no-padding">
 							<i class="fa fa-lock"></i>
-							<input type="password" name="aaa" class="form-element" placeholder="Password" value="123456">
+							<input type="password" name="aaa" class="form-element" placeholder="Password">
 						</div>
-						<div class="form-row no-padding">
-							<i class="fa fa-language"></i>
-							<select class="form-element">
-								<option value="">Language</option>
-								<option value="1"  selected>English</option>
-								<option value="2">Spanish</option>
-								<option value="3">Turkish</option>
-							</select>
-						</div>
+					</div>
+
+					<div class="form-row txt-center mt-15">
+						<a href="forgot-password.html" data-loader="show">Forgot password?</a>
 					</div>
 
 					<div class="form-divider"></div>
 
 					<div class="form-row">
-						<a href="#" class="button circle block orange">Sign Up</a>
+						<a href="Javascript:void(0);" class="button circle block orange">Login</a>
 					</div>
 
 					<div class="form-row txt-center mt-15">
-						Already have an account? <a href="login.html" data-loader="show">Login</a>
+						Don't you have an account yet? <a href="signup.html" data-loader="show">Sign Up</a>
 					</div>
 
 				</div>
@@ -201,7 +172,4 @@ src="https://www.facebook.com/tr?id=692589158011169&amp;ev=PageView&amp;noscript
 
 	
 </body>
-
-
-<!-- Mirrored from cryptooapp.netlify.app/temp/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Dec 2022 20:04:39 GMT -->
 </html>
