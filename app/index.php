@@ -1,4 +1,8 @@
-<?php include_once 'inc/header.php' ?>
+<?php 
+	session_start();
+	if (!isset($_SESSION['user'])) {header('Location:login.php');}
+	include_once 'inc/header.php';
+?>
 
 			<!-- Page content start -->
 			<main class="margin mt-0">
