@@ -13,20 +13,20 @@
 
 	<!-- Animate css file for css3 animations. for more : https://daneden.github.io/animate.css -->
 	<!-- Only use animate action. If you dont use animation, you don't have to add.-->
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/cryptocoins.css">
-	<link rel="stylesheet" type="text/css" href="plugins/c3-chart/c3.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cryptocoins.css">
+	<link rel="stylesheet" type="text/css" href="assets/plugins/c3-chart/c3.css">
 
 	<!-- Template global css file. Requared all pages -->
-	<link rel="stylesheet" type="text/css" href="css/global.style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/global.style.css">
 
 	<!-- Swiper slider css file -->
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/jqcandlestick.css">
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<link rel="stylesheet" href="assets/css/jqcandlestick.css">
 
 	<!--turbo slider plugin css file -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="plugins/turbo-slider/turbo.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/plugins/turbo-slider/turbo.css">
 </head>
 
 <body>

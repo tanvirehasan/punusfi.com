@@ -24,35 +24,32 @@
 	</div>
 
 	<!-- JQuery library file. requared all pages -->
-	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
 
 	<!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
 
 	 <!-- Initialize Swiper -->
  	
   	<!-- Flot Charts -->
-	<script src="plugins/c3-chart/c3.min.js"></script>
-	<script src="plugins/c3-chart/d3.min.js"></script>
-	<script src="plugins/c3-chart/c3.custom.js"></script>
+	<script src="assets/plugins/c3-chart/c3.min.js"></script>
+	<script src="assets/plugins/c3-chart/d3.min.js"></script>
+	<script src="assets/plugins/c3-chart/c3.custom.js"></script>
   	<!-- Flot Charts -->
-	<script src="plugins/flot/jquery.flot.min.js"></script>
-	<script src="plugins/flot/jquery.flot.time.min.js"></script>
-	<script src="plugins/flot/jquery.flot.pie.min.js"></script>
-	<script src="plugins/flot/jquery.flot.tooltip.min.js"></script>
-	<script src="plugins/flot/jquery.flot.resize.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
     <!-- Sparkline-->
-    <script src="plugins/jquery-sparkline/jquery.sparkline.js"></script>
+    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.js"></script>
 
-    <script src="js/jquery.jqcandlestick.min.js"></script>
-    <script src="js/candle-stick-ini.js"></script>
-
-
-    jquery.jqcandlestick.min
+    <script src="assets/js/jquery.jqcandlestick.min.js"></script>
+    <script src="assets/js/candle-stick-ini.js"></script>
 
 	<!-- Template global script file. requared all pages -->
-	<script src="js/app-charts.js"></script>
-	<script src="js/global.script.js"></script>
+	<script src="assets/js/app-charts.js"></script>
+	<script src="assets/js/global.script.js"></script>
 
 </body>
 </html>

@@ -2683,7 +2683,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ddc3e', end
 [31. Content Styles]
 *------------------------------------------------------------------*/
 .dash-balance{
-	background: url(../img/content/dash-bg.png) no-repeat center center;
+	background: url(../../img/content/dash-bg.png) no-repeat center center;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
