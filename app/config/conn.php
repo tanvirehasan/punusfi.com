@@ -1,5 +1,10 @@
 <?php
 
+    // $servername = "localhost";
+    // $username = "yesmart247_punusfi";
+    // $password = "TaNVIR@@114";
+    // $db = "yesmart247_punusfi";
+
     $servername = "localhost";
     $username = "root";
     $password = "";
