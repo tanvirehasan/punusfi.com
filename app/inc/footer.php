@@ -1,55 +1,23 @@
-				<footer>
-					<div class="container">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-						<p>Copyright © All Right Reserved</p>
-					</div>
-				</footer>
-			</main>
-			<!-- Page content end -->
-		</div>
-	</div>
+<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+</div>
 
-	<!--Page loader DOM Elements. Requared all pages-->
-	<div class="sweet-loader">
-		<div class="box">
-		  	<div class="circle1"></div>
-		  	<div class="circle2"></div>
-		  	<div class="circle3"></div>
-		</div>
-	</div>
+<script data-cfasync="false" src="assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/vendor.min.js" type="599bf4b0349c482d7028e624-text/javascript"></script>
+<script src="assets/js/app.min.js" type="599bf4b0349c482d7028e624-text/javascript"></script>
 
-	<!-- JQuery library file. requared all pages -->
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-
-	<!-- Swiper JS -->
-    <script src="assets/js/swiper.min.js"></script>
-
-	 <!-- Initialize Swiper -->
- 	
-  	<!-- Flot Charts -->
-	<script src="assets/plugins/c3-chart/c3.min.js"></script>
-	<script src="assets/plugins/c3-chart/d3.min.js"></script>
-	<script src="assets/plugins/c3-chart/c3.custom.js"></script>
-  	<!-- Flot Charts -->
-	<script src="assets/plugins/flot/jquery.flot.min.js"></script>
-	<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
-	<script src="assets/plugins/flot/jquery.flot.pie.min.js"></script>
-	<script src="assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
-	<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
-    <!-- Sparkline-->
-    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.js"></script>
-
-    <script src="assets/js/jquery.jqcandlestick.min.js"></script>
-    <script src="assets/js/candle-stick-ini.js"></script>
-
-	<!-- Template global script file. requared all pages -->
-	<script src="assets/js/app-charts.js"></script>
-	<script src="assets/js/global.script.js"></script>
-
+<script src="assets/plugins/jvectormap-next/jquery-jvectormap.min.js" type="599bf4b0349c482d7028e624-text/javascript">
+</script>
+<script src="assets/plugins/jvectormap-content/world-mill.js" type="599bf4b0349c482d7028e624-text/javascript">
+</script>
+<script src="assets/plugins/apexcharts/dist/apexcharts.min.js" type="599bf4b0349c482d7028e624-text/javascript">
+</script>
+<script src="assets/js/demo/dashboard.demo.js" type="599bf4b0349c482d7028e624-text/javascript"></script>
+<script src="assets/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="599bf4b0349c482d7028e624-|49" defer=""></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+    integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+    data-cf-beacon='{"rayId":"78a945223c61bc27","version":"2022.11.3","r":1,"token":"4db8c6ef997743fda032d4f73cfeff63","si":100}'
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,81 +1,69 @@
 <?php
-	session_start();
-	include_once "config/conn.php";
+    session_start();
+    if (isset($_SESSION['user'])) {
+        header('Location:index.php');
+        }
+    include "config/conn.php";
+    include "controller/user/sign_login.php";
 ?>
-<?php include_once "config/function.php"; ?>
-<?php include_once "controller/signup_login/sign_login.php"; ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-	<title>Login</title>
-
-	<!-- Google font file. If you want you can change. -->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,900" rel="stylesheet">
-
-	<!-- Fontawesome font file css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-
-	<!-- Template global css file. Requared all pages -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/global.style.css">
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="assets/css/vendor.min.css" rel="stylesheet" />
+    <link href="assets/css/app.min.css" rel="stylesheet" />
 </head>
 
-<body>
-	
+<body class='pace-top'>
+    <div id="app" class="app app-full-height app-without-header">
 
-	<div class="wrapper">
-
-			<!-- Page content start -->
-			<main style="margin-top: 80%;">
-			
-				<div class="container m-0 p-3">
-					<form action="" method="POST">
-						<div class="form-row-group with-icons">
-							<h1 class="text-success text-center">Login</h1>
-							<?php if (isset($mess)) {echo "<h3 class='text-center'>".$mess."</h3>";} ?>
-							<div class="form-row no-padding">
-								<i class="fa fa-envelope"></i>
-								<input type="text" name="userid_email" class="form-element" placeholder="Username or Email">
-							</div>
-							<div class="form-row no-padding">
-								<i class="fa fa-lock"></i>
-								<input type="password" name="password" class="form-element" placeholder="Password">
-							</div>
-						</div>
-					
-					<div class="form-row txt-center mt-15">
-						<a href="forgot-password.php" data-loader="show">Forgot password?</a>
-					</div>
-
-					<div class="form-divider"></div>
-
-					<div class="form-row">
-						<button type="submit" name="login_btn" class="button circle block orange">Login</button>
-					</div>
-
-					</form>
-
-					<div class="form-row txt-center mt-15">
-						Don't you have an account yet? <a href="signup.php" data-loader="show">Sign Up</a>
-					</div>
-
-				</div>
-			</main>
-			<!-- Page content end -->
-		</div>
-	</div>
+        <div class="login">
+            <div class="login-content">
+                <form action="" method="POST" name="login_form">
+                    <h1 class="text-center">Sign In</h1>
+                    <div class="text-white text-opacity-50 text-center mb-4">
+                        For your protection, please verify your identity.
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="text" name="userid_email" class="form-control form-control-lg bg-white bg-opacity-5" value="" placeholder="" />
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex">
+                            <label class="form-label">Password <span class="text-danger">*</span></label>
+                            <a href="#" class="ms-auto text-white text-decoration-none text-opacity-50">Forgot
+                                password?</a>
+                        </div>
+                        <input type="password" name="password" class="form-control form-control-lg bg-white bg-opacity-5" value="" placeholder="" />
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="customCheck1" />
+                            <label class="form-check-label" for="customCheck1">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" name="login_btn" class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3">Sign
+                        In</button>
+                    <div class="text-center text-white text-opacity-50">
+                        Don't have an account yet? <a href="page_register.html">Sign up</a>.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
-	<!-- JQuery library file. requared all pages -->
-	<script src="assets/js/jquery-3.2.1.min.js"></script>
-
-	<!-- Template global script file. requared all pages -->
-	<script src="assets/js/global.script.js"></script>
-
-	
+    <script src="assets/js/vendor.min.js" type="21df2622481492e671e5bc02-text/javascript"></script>
+    <script src="assets/js/app.min.js" type="21df2622481492e671e5bc02-text/javascript"></script>
+    <script src="assets/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="21df2622481492e671e5bc02-|49" defer=""></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"78a945484ac6bc2d","version":"2022.11.3","r":1,"token":"4db8c6ef997743fda032d4f73cfeff63","si":100}' crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

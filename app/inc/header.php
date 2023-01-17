@@ -1,159 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-	<title>Crypto Mobile Template</title>
-
-	<!-- Google font file. If you want you can change. -->
-	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900" rel="stylesheet">
-
-	<!-- Fontawesome font file css -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-	<!-- Animate css file for css3 animations. for more : https://daneden.github.io/animate.css -->
-	<!-- Only use animate action. If you dont use animation, you don't have to add.-->
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/cryptocoins.css">
-	<link rel="stylesheet" type="text/css" href="assets/plugins/c3-chart/c3.css">
-
-	<!-- Template global css file. Requared all pages -->
-	<link rel="stylesheet" type="text/css" href="assets/css/global.style.css">
-
-	<!-- Swiper slider css file -->
-	<link rel="stylesheet" href="assets/css/swiper.min.css">
-	<link rel="stylesheet" href="assets/css/jqcandlestick.css">
-
-	<!--turbo slider plugin css file -->
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/plugins/turbo-slider/turbo.css">
+	<meta charset="utf-8" />
+	<title><?=$title?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link href="assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/app.min.css" rel="stylesheet" />
+	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
 </head>
 
 <body>
-	
-
-	<div class="wrapper ">
-		<div class="nav-menu">
-			<nav class="menu">
-			
-				<!-- Menu navigation start -->
-				<div class="nav-container">
-					<ul class="main-menu">
-						<li class="active">
-							<a href="index.html"><img src="img/content/icons/1.png" alt=""><strong class="special">Dashboard</strong> </a>
-						</li>
-						<li class="">
-							<a href="wallet.html"><img src="img/content/icons/2.png" alt=""><strong class="special">My Walet</strong> </a>
-						</li>
-						<li class="">
-							<a href="trading.html"><img src="img/content/icons/3.png" alt=""><strong class="special">Crypto Trade</strong> </a>
-						</li>
-						<li class="">
-							<a href="buy-sell.html"><img src="img/content/icons/6.png" alt=""><strong class="special">Buy & sell</strong> </a>
-						</li>
-						<li class="">
-							<a href="profile.html"><img src="img/content/icons/5.png" alt=""><strong class="special">Trader Profile</strong> </a>
-						</li>
-						<li class="">
-							<a href="affiliate.html"><img src="img/content/icons/4.png" alt=""><strong class="special">Affiliate System</strong> </a>
-						</li>
-						<li class="">
-							<a href="setting.html"><img src="img/content/icons/11.png" alt=""><strong class="special">Settings</strong> </a>
-						</li>
-						<li>
-							<a href="javascript:void(0);"><img src="img/content/icons/9.png" alt=""><strong class="special">Login/Register</strong> <span class="fa fa-angle-down"></span></a>
-							<ul>
-								<li><a href="login.html" data-loader="show">Login</a></li>
-								<li><a href="signup.html" data-loader="show">Register</a></li>
-								<li><a href="forgot-password.html" data-loader="show">Forgot Password</a></li>
-							</ul>
-						</li>
-						
-						<li>
-							<a href="javascript:void(0);"><img src="img/content/icons/8.png" alt=""> <strong class="special">Wizards</strong> <span class="fa fa-angle-down"></span></a>
-							<ul>
-								<li><a href="wizard-default.html" data-loader="show">Wizard Default</a></li>
-								<li><a href="wizard-fullscreen.html" data-loader="show">Wizard Fullscreen</a></li>
-							</ul>
-						</li>
-						<li class="">
-							<a href="charts.html"><img src="img/content/icons/14.png" alt=""><strong class="special">Charts</strong> </a>
-						</li>
-						<li>
-							<a href="forms.html" data-loader="show"><img src="img/content/icons/7.png" alt=""><strong class="special">Form Elements</strong></a>
-						</li>
-						<li>
-							<a href="#"><img src="img/content/icons/10.png" alt=""><strong class="special"> Components</strong> <span class="fa fa-angle-down"></span></a>
-							<ul>
-								<li><a href="tab-bottom.html" data-loader="show">Tab (Bottom)</a></li>
-								<li><a href="tab-top.html" data-loader="show">Tab (Top)</a></li>
-								<li><a href="accordion.html" data-loader="show">Accordion</a></li>
-								<li><a href="popup.html" data-loader="show">Popup Modal</a></li>
-								<li><a href="checkbox-list.html" data-loader="show">Check List</a></li>
-								<li><a href="link-list.html" data-loader="show">Link List</a></li>
-								<li><a href="link-list-two-column.html" data-loader="show">Two Column Links</a></li>
-							</ul>
-						</li>
-						<li class="">
-							<a href="#"><img src="img/content/icons/15.png" alt=""><strong class="special"> Pages</strong> <span class="fa fa-angle-down"></span></a>
-							<ul>
-								<li class=""><a href="profile.html" data-loader="show">User Profile</a></li>
-								<li><a href="search-result.html" data-loader="show">Search Results</a></li>
-								<li><a href="contact.html" data-loader="show">Contact</a></li>
-								<li><a href="blank.html" data-loader="show">Blank Page</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			<!-- Menu navigation end -->
-			</nav>
-		</div>
-		<div class="wrapper-inline">
-			<!-- Header area start -->
-			<header class="no-background"> <!-- extra class no-background -->
-
-				<div class="search-button" data-search="open">
-					<img src="img/content/notification1.png" class="not-icon1" alt="">
-					<img src="img/content/notification2.png" class="not-icon2" alt="">
-				</div>
-
-				<div class="navi-menu-button">
-					<em></em>
-					<em></em>
-					<em></em>
-				</div>
-
-			</header>
-			<!-- Header area end -->
-
-			<div class="bottom-menu-section">
-				<ul class="bottom-menu list-unstyled list-inline">
-					<li>
-						<a href="index.html">
-							<img src="img/content/l1.png" alt="">
-							<p>Home</p>
-						</a>
-					</li>
-					<li>
-						<a href="wallet.html">
-							<img src="img/content/l2.png" alt="">
-							<p>Wallet</p>
-						</a>
-					</li>
-					<li>
-						<a class="b-m-pluse" href="#"><i class="fa fa-plus"></i></a>
-					</li>
-					<li>
-						<a href="setting.html">
-							<img src="img/content/l3.png" alt="">
-							<p>Cards</p>
-						</a>
-					</li>
-					<li>
-						<a href="profile.html">
-							<img src="img/content/l4.png" alt="">
-							<p>Profile</p>
-						</a>
-					</li>
-				</ul>	
+	<div id="app" class="app">
+		<div id="header" class="app-header">
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed"
+					data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
 			</div>
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled"
+					data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+
+
+			<div class="brand">
+				<a href="index-2.html" class="brand-logo">
+					<span class="brand-img">
+						<span class="brand-img-text text-theme">H</span>
+					</span>
+					<span class="brand-text">HUD ADMIN</span>
+				</a>
+			</div>
+
+
+			<div class="menu">
+				<div class="menu-item dropdown">
+					<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"
+						class="menu-link">
+						<div class="menu-icon"><i class="bi bi-search nav-icon"></i></div>
+					</a>
+				</div>
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-grid-3x3-gap nav-icon"></i></div>
+					</a>
+					<div class="dropdown-menu fade dropdown-menu-end w-300px text-center p-0 mt-1">
+						<div class="row row-grid gx-0">
+							<div class="col-4">
+								<a href="email_inbox.html" class="dropdown-item text-decoration-none p-3 bg-none">
+									<div class="position-relative">
+										<i
+											class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
+										<i class="bi bi-envelope h2 opacity-5 d-block my-1"></i>
+									</div>
+									<div class="fw-500 fs-10px text-white">INBOX</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="pos_customer_order.html" target="_blank"
+									class="dropdown-item text-decoration-none p-3 bg-none">
+									<div><i class="bi bi-hdd-network h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">POS SYSTEM</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="calendar.html" class="dropdown-item text-decoration-none p-3 bg-none">
+									<div><i class="bi bi-calendar4 h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">CALENDAR</div>
+								</a>
+							</div>
+						</div>
+						<div class="row row-grid gx-0">
+							<div class="col-4">
+								<a href="helper.html" class="dropdown-item text-decoration-none p-3 bg-none">
+									<div><i class="bi bi-terminal h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">HELPER</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="settings.html" class="dropdown-item text-decoration-none p-3 bg-none">
+									<div class="position-relative">
+										<i
+											class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
+										<i class="bi bi-sliders h2 opacity-5 d-block my-1"></i>
+									</div>
+									<div class="fw-500 fs-10px text-white">SETTINGS</div>
+								</a>
+							</div>
+							<div class="col-4">
+								<a href="widgets.html" class="dropdown-item text-decoration-none p-3 bg-none">
+									<div><i class="bi bi-collection-play h2 opacity-5 d-block my-1"></i></div>
+									<div class="fw-500 fs-10px text-white">WIDGETS</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-bell nav-icon"></i></div>
+						<div class="menu-badge bg-theme"></div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end mt-1 w-300px fs-11px pt-1">
+						<h6 class="dropdown-header fs-10px mb-1">NOTIFICATIONS</h6>
+						<div class="dropdown-divider mt-1"></div>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px">
+								<i class="bi bi-bag text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">NEW ORDER RECEIVED ($1,299)</div>
+								<div class="small">JUST NOW</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-person-circle text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">3 NEW ACCOUNT CREATED</div>
+								<div class="small">2 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-gear text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">SETUP COMPLETED</div>
+								<div class="small">3 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-grid text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">WIDGET INSTALLATION DONE</div>
+								<div class="small">5 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-credit-card text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">PAYMENT METHOD ENABLED</div>
+								<div class="small">10 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<hr class="bg-white-transparent-5 mb-0 mt-2" />
+						<div class="py-10px mb-n2 text-center">
+							<a href="#" class="text-decoration-none fw-bold">SEE ALL</a>
+						</div>
+					</div>
+				</div>
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-img online">
+							<img src="assets/img/user/profile.jpg" alt="Profile" height="60" />
+						</div>
+						<div class="menu-text d-sm-block d-none"><span class="__cf_email__"
+								data-cfemail="65101600170b040800250406060a100b114b060a08">[email&#160;protected]</span>
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
+						<a class="dropdown-item d-flex align-items-center" href="profile.html">PROFILE <i
+								class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="email_inbox.html">INBOX <i
+								class="bi bi-envelope ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="calendar.html">CALENDAR <i
+								class="bi bi-calendar ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="settings.html">SETTINGS <i
+								class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i></a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item d-flex align-items-center" href="logout.php">LOGOUT <i
+								class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i></a>
+					</div>
+				</div>
+			</div>
+
+
+			<form class="menu-search" method="POST" name="header_search_form">
+				<div class="menu-search-container">
+					<div class="menu-search-icon"><i class="bi bi-search"></i></div>
+					<div class="menu-search-input">
+						<input type="text" class="form-control form-control-lg" placeholder="Search menu..." />
+					</div>
+					<div class="menu-search-icon">
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i
+								class="bi bi-x-lg"></i></a>
+					</div>
+				</div>
+			</form>
+
+		</div>
