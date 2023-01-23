@@ -1,47 +1,51 @@
 <?php
 include "inc/header.php";
 include "inc/navbar.php";
+include_once "controller/package/package_sql.php";
 ?>
 
 <div id="content" class="app-content">
     <div class="row">
-
-        <div class="col-xl-3 col-lg-6">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">START UP</span>
-                        <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
-                    </div>
-
-                    <div class="row align-items-center mb-2">
-                        <div class="col-7">
-                            <h3 class="mb-0">$20</h3>
-                        </div>
-                        <div class="col-5">
-                            <div class="mt-n2" data-render="apexchart" data-type="bar" data-title="Visitors" data-height="30"></div>
-                        </div>
-                    </div>
-
-                    <div class="small text-white text-opacity-50 text-truncate">
-                        <i class="fa fa-chevron-up fa-fw me-1"></i> 33.3% more than last week<br />
-                        <i class="far fa-user fa-fw me-1"></i> 45.5% new visitors<br />
-                        <i class="far fa-times-circle fa-fw me-1"></i> 3.25% bounce rate
-                    </div>
-                </div>
-
-                <div class="card-arrow">
-                    <div class="card-arrow-top-left"></div>
-                    <div class="card-arrow-top-right"></div>
-                    <div class="card-arrow-bottom-left"></div>
-                    <div class="card-arrow-bottom-right"></div>
-                </div>
-
-            </div>
-
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Choose Your Package</h1>
+            <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
         </div>
 
-    </div>
-</div>
+        <?php
+        $packdata = SelectData('packages', '');
+        while ($row = $packdata->fetch_object()) { ?>
+            <form action="" method="POST">
+                <div class="col-xl-3 col-lg-6 text-center">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal"><?= $row->package_name ?></h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$<?= $row->package_price ?> <small class="text-muted">/ 365 Dyes</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <?= $row->package_info ?>
+                            </ul>
+                            <input type="hidden" name="price" value="<?= $row->package_price ?>">
+                            <input type="hidden" name="package_id" value="<?= $row->package_id?>">
+                            <?php
+                            if (CashIn($userid) >= $row->package_price) {
+                                echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme'>Purchase</button>";
+                            } else {
+                                echo "<a href='deposit.php' class='btn btn-lg btn-block btn-outline-theme'>Purchase</a>";
+                            }
+                            ?>
 
-<?php include "inc/footer.php"; ?>
+                        </div>
+                        <div class="card-arrow">
+                            <div class="card-arrow-top-left"></div>
+                            <div class="card-arrow-top-right"></div>
+                            <div class="card-arrow-bottom-left"></div>
+                            <div class="card-arrow-bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        <?php } ?>
+
+    </div>
+    <?php include "inc/footer.php"; ?>

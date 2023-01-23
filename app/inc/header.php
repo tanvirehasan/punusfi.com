@@ -1,8 +1,12 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['user'])) {
+	if (!isset($_SESSION['user'])) {		
 		header('Location:login.php');
-}?>
+	}
+	include_once "config/conn.php";
+	include_once "config/function.php";
+	$userid = UserData('id');	
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +23,7 @@
 </head>
 
 <body>
-	<div id="app" class="app">
+	<div id="app" class="app ">
 		<div id="header" class="app-header">
 			<div class="desktop-toggler">
 				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed"
@@ -42,9 +46,9 @@
 			<div class="brand">
 				<a href="index-2.html" class="brand-logo">
 					<span class="brand-img">
-						<span class="brand-img-text text-theme">H</span>
+						<span class="brand-img-text text-theme px-1">P</span>
 					</span>
-					<span class="brand-text">HUD ADMIN</span>
+					<span class="brand-text">PUNUS</span>
 				</a>
 			</div>
 

@@ -1,4 +1,4 @@
-<div id="sidebar" class="app-sidebar">
+<div id="sidebar" class="app-sidebar bg-dark">
 
 			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
 

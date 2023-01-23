@@ -1,5 +1,4 @@
 <?php
-
 //SELECT
 function SelectData($TableName, $moresql){
 	global $conn;
@@ -16,12 +15,10 @@ function UpdateData($table_name, $more){
 }
 
 
-
-
 //UserData
 function UserData($U_data){
-    $row = mysqli_fetch_array(SelectData('admin',"WHERE email='{$_SESSION['user']}'"));
-    echo $row[$U_data];
+    $row = mysqli_fetch_array(SelectData('users',"WHERE email_id='{$_SESSION['user']}' or user_name='{$_SESSION['user']}' "));
+    return $row[$U_data];
 }
 
 //reconect
@@ -36,6 +33,50 @@ function If_Not_Login($url){
 		Reconect($url);
 	}
 }
+
+
+//packeg
+function PackageData($pack_data)
+{
+    $row = mysqli_fetch_array(SelectData('packages', "WHERE package_id = "));
+    return $row[$pack_data];
+}
+
+
+// Cash In
+function CashIn($userid){
+    global $conn;
+    $sql= "SELECT SUM(trnx_amount) as totalcashin FROM cash_in_out where recvied_id='$userid' ";
+    $select = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($select);
+    return $row['totalcashin'];
+}
+
+// Cash Out
+function CashOut($userid){
+    global $conn;
+    $sql = "SELECT SUM(trnx_amount) as totalcashout FROM cash_in_out where sent_id='$userid' ";
+    $select = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($select);
+    return $row['totalcashout'];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function cunty_list(){?>
