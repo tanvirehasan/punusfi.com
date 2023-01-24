@@ -14,19 +14,23 @@ include_once "controller/package/package_sql.php";
         <?php
         $packdata = SelectData('packages', '');
         while ($row = $packdata->fetch_object()) { ?>
-            <form action="" method="POST">
-                <div class="col-xl-3 col-lg-6 text-center">
+
+            <div class="col-xl-3 col-lg-6 text-center">
+                <form action="" method="POST">
                     <div class="card mb-4 box-shadow">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal"><?= $row->package_name ?></h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$<?= $row->package_price ?> <small class="text-muted">/ 365 Dyes</small></h1>
+                            <div class="page-price">
+                                <h1 class="card-title pricing-card-title">$<?= $row->package_price ?></h1>
+                                <small class="text-muted">/ 365 Dyes</small>
+                            </div>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <?= $row->package_info ?>
                             </ul>
                             <input type="hidden" name="price" value="<?= $row->package_price ?>">
-                            <input type="hidden" name="package_id" value="<?= $row->package_id?>">
+                            <input type="hidden" name="package_id" value="<?= $row->package_id ?>">
                             <?php
                             if (CashIn($userid) >= $row->package_price) {
                                 echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme'>Purchase</button>";
@@ -43,8 +47,8 @@ include_once "controller/package/package_sql.php";
                             <div class="card-arrow-bottom-right"></div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         <?php } ?>
 
     </div>

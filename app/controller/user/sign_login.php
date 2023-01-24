@@ -17,7 +17,9 @@ if (isset($_POST['signup_btn'])) {
     $placement    = $_POST['placement'];
         
     $insert = "INSERT INTO  users (refer_id,name,user_name,email_id,phone_no,password,pin,country,gender,placemnet_id,placement) 
-                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender','$placemnet_id','$placement') ";
+                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender','$placemnet_id','$placement')
+                                   
+                 ";
     if (mysqli_query($conn,$insert)==TRUE) {
         header('location:login.php');
     }else{

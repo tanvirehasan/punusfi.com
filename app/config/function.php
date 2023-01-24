@@ -62,19 +62,21 @@ function CashOut($userid){
 }
 
 
+// ROI
+// Cash Out
+function ROI($userid)
+{
+    global $conn;
+    $sql = "SELECT SUM(trnx_amount) as totalcashout FROM cash_in_out where sent_id='$userid' ";
+    $select = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($select);
+    return $row['totalcashout'];
 
-
-
-
-
-
-
-
-
-
-
-
-
+    $date1 = date_create("2013-03-15");
+    $date2 = date_create("2013-12-12");
+    $diff = date_diff($date1, $date2);
+    $diff->format("%R%a days");
+}
 
 
 
