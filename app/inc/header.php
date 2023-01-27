@@ -1,11 +1,11 @@
 <?php
-	session_start();
-	if (!isset($_SESSION['user'])) {		
-		header('Location:login.php');
-	}
-	include_once "config/conn.php";
-	include_once "config/function.php";
-	$userid = UserData('id');	
+session_start();
+if (!isset($_SESSION['user'])) {
+	header('Location:login.php');
+}
+include_once "config/conn.php";
+include_once "config/function.php";
+$userid = UserData('id');
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title><?=$title?></title>
+	<title><?= $title ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<meta name="author" content="" />
@@ -26,16 +26,14 @@
 	<div id="app" class="app ">
 		<div id="header" class="app-header">
 			<div class="desktop-toggler">
-				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed"
-					data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
 				</button>
 			</div>
 			<div class="mobile-toggler">
-				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled"
-					data-toggle-target=".app">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
@@ -55,8 +53,7 @@
 
 			<div class="menu">
 				<div class="menu-item dropdown">
-					<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"
-						class="menu-link">
+					<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app" class="menu-link">
 						<div class="menu-icon"><i class="bi bi-search nav-icon"></i></div>
 					</a>
 				</div>
@@ -69,16 +66,14 @@
 							<div class="col-4">
 								<a href="email_inbox.html" class="dropdown-item text-decoration-none p-3 bg-none">
 									<div class="position-relative">
-										<i
-											class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
+										<i class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
 										<i class="bi bi-envelope h2 opacity-5 d-block my-1"></i>
 									</div>
 									<div class="fw-500 fs-10px text-white">INBOX</div>
 								</a>
 							</div>
 							<div class="col-4">
-								<a href="pos_customer_order.html" target="_blank"
-									class="dropdown-item text-decoration-none p-3 bg-none">
+								<a href="pos_customer_order.html" target="_blank" class="dropdown-item text-decoration-none p-3 bg-none">
 									<div><i class="bi bi-hdd-network h2 opacity-5 d-block my-1"></i></div>
 									<div class="fw-500 fs-10px text-white">POS SYSTEM</div>
 								</a>
@@ -100,8 +95,7 @@
 							<div class="col-4">
 								<a href="settings.html" class="dropdown-item text-decoration-none p-3 bg-none">
 									<div class="position-relative">
-										<i
-											class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
+										<i class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
 										<i class="bi bi-sliders h2 opacity-5 d-block my-1"></i>
 									</div>
 									<div class="fw-500 fs-10px text-white">SETTINGS</div>
@@ -195,22 +189,16 @@
 						<div class="menu-img online">
 							<img src="assets/img/user/profile.jpg" alt="Profile" height="60" />
 						</div>
-						<div class="menu-text d-sm-block d-none"><span class="__cf_email__"
-								data-cfemail="65101600170b040800250406060a100b114b060a08">[email&#160;protected]</span>
+						<div class="menu-text d-sm-block d-none"><span>$ <?= Current_balance() ?></span>
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
-						<a class="dropdown-item d-flex align-items-center" href="profile.html">PROFILE <i
-								class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
-						<a class="dropdown-item d-flex align-items-center" href="email_inbox.html">INBOX <i
-								class="bi bi-envelope ms-auto text-theme fs-16px my-n1"></i></a>
-						<a class="dropdown-item d-flex align-items-center" href="calendar.html">CALENDAR <i
-								class="bi bi-calendar ms-auto text-theme fs-16px my-n1"></i></a>
-						<a class="dropdown-item d-flex align-items-center" href="settings.html">SETTINGS <i
-								class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="profile.html">PROFILE <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="email_inbox.html">INBOX <i class="bi bi-envelope ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="calendar.html">CALENDAR <i class="bi bi-calendar ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="settings.html">SETTINGS <i class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i></a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item d-flex align-items-center" href="logout.php">LOGOUT <i
-								class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="logout.php">LOGOUT <i class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i></a>
 					</div>
 				</div>
 			</div>
@@ -223,8 +211,7 @@
 						<input type="text" class="form-control form-control-lg" placeholder="Search menu..." />
 					</div>
 					<div class="menu-search-icon">
-						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i
-								class="bi bi-x-lg"></i></a>
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i class="bi bi-x-lg"></i></a>
 					</div>
 				</div>
 			</form>

@@ -21,6 +21,13 @@ function UserData($U_data){
     return $row[$U_data];
 }
 
+//UserData
+function referidData($data){
+    $referid = UserData('refer_id');
+    $row = mysqli_fetch_array(SelectData('users', "WHERE user_name='$referid' "));
+    return $row[$data];
+}
+
 //reconect
 function Reconect($url){
 	echo "<script> location.replace('".$url."')</script>";
@@ -36,9 +43,9 @@ function If_Not_Login($url){
 
 
 //packeg
-function PackageData($pack_data)
-{
-    $row = mysqli_fetch_array(SelectData('packages', "WHERE package_id = "));
+function PackageData($pack_data){
+    $packid = UserData('packageid');
+    $row = mysqli_fetch_array(SelectData('packages', "WHERE package_id ='$packid'"));
     return $row[$pack_data];
 }
 
@@ -61,21 +68,45 @@ function CashOut($userid){
     return $row['totalcashout'];
 }
 
+function Current_balance(){
+    $userid = UserData('id');
+    $total = CashIn($userid) - CashOut($userid);
+    return $total;    
+}
+
 
 // ROI
-// Cash Out
-function ROI($userid)
-{
+function ROI(){
+
     global $conn;
-    $sql = "SELECT SUM(trnx_amount) as totalcashout FROM cash_in_out where sent_id='$userid' ";
+    $userid = UserData('id');
+    $pardayroi= PackageData('per_day_roi');
+    $invesment = PackageData('package_price');
+    
+    $sql = "SELECT pack_buy_date FROM investments where user_id='$userid' ";
     $select = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($select);
-    return $row['totalcashout'];
+    $packdate= $row['pack_buy_date'];
 
-    $date1 = date_create("2013-03-15");
-    $date2 = date_create("2013-12-12");
+    $date1 = date_create("$packdate");
+    $date2 = date_create(date('Y-m-d'));
     $diff = date_diff($date1, $date2);
-    $diff->format("%R%a days");
+    $Totaldays = $diff->format("%a");
+    $perday = ($pardayroi / 100) * $invesment;
+    $totalroi = $Totaldays* $perday;
+    return [$totalroi, $Totaldays];
+ 
+}
+
+function refericom(){
+    global $conn;
+    $userid = UserData('id');
+    $sql = "SELECT SUM(investmnet) as refer FROM investments where refer_id='$userid' ";
+    $select = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($select);
+    $totalrefer = $row['refer'];  
+    $refernet = (5/100)*$totalrefer;
+    return $refernet;
 }
 
 

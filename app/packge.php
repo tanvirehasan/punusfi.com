@@ -31,6 +31,7 @@ include_once "controller/package/package_sql.php";
                             </ul>
                             <input type="hidden" name="price" value="<?= $row->package_price ?>">
                             <input type="hidden" name="package_id" value="<?= $row->package_id ?>">
+                            
                             <?php
                             if (CashIn($userid) >= $row->package_price) {
                                 echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme'>Purchase</button>";
@@ -50,6 +51,6 @@ include_once "controller/package/package_sql.php";
                 </form>
             </div>
         <?php } ?>
-
     </div>
-    <?php include "inc/footer.php"; ?>
+</div>
+<?php include "inc/footer.php"; ?>
