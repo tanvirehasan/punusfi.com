@@ -14,7 +14,12 @@
             mysqli_query($conn, $insertw);
             
             $update = " UPDATE  users SET stutas='1', packageid='$pack_id' Where id='$user_id'";  
-            mysqli_query($conn, $update);
+            if (mysqli_query($conn, $update)==TRUE) {
+                
+                header('location:success.php');
+            }
+
+
         }else{
             echo "sorry";
         }
