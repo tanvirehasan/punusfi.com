@@ -65,7 +65,7 @@
                     <div class="mb-3">
                         <label class="form-label">Country <span class="text-danger">*</span></label>
                         <select class="form-select form-select-lg bg-white bg-opacity-5" name="country">
-                            <option>United States</option>
+                            <?= cunty_list()?>
                         </select>
                     </div>
                     <div class="mb-3">

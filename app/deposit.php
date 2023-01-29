@@ -33,9 +33,9 @@ include_once "controller/package/package_sql.php";
 
                     <div class="mb-3">
                         <label class="form-label"> Tanx ID/Payment Profv </label>
-                        <input type="number" class="form-control form-control-lg bg-white bg-opacity-5" name="tanxid">
+                        <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="tanxid">
                     </div>
-                    <input type="button" value="Submit" name="addmoney" class="btn btn-outline-theme btn-lg d-block mt-5 ">
+                    <input type="submit" value="Submit" name="addmoney" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>
                 <div class="card-arrow">
                     <div class="card-arrow-top-left"></div>
@@ -56,9 +56,10 @@ include_once "controller/package/package_sql.php";
     $username = $_POST['username'];
     $amount = $_POST['amount'];
     $payment_type = $_POST['payment_type'];
+    $tanxid = $_POST['tanxid'];
 
-    $insert  = "INSERT (username,amount,payment_type) values () ";
-
+    $insert  = "INSERT INTO addfund (userid, amount,payment_type,tanxid,datetimeaddmone) VALUES ('$username','$amount','$payment_type','$tanxid',NOW() )";
+        mysqli_query($conn, $insert);
     }
 
 
