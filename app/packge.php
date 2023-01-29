@@ -33,7 +33,7 @@ include_once "controller/package/package_sql.php";
                             <input type="hidden" name="package_id" value="<?= $row->package_id ?>">
                             
                             <?php
-                            if (CashIn($userid) <= $row->package_price) {
+                            if (CashIn($userid) >= $row->package_price) {
                                 echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme'>Purchase</button>";
                             } else {
                                 echo "<a href='deposit.php' class='btn btn-lg btn-block btn-outline-theme'>Purchase</a>";
