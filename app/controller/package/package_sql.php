@@ -15,8 +15,7 @@
             
             $update = " UPDATE  users SET stutas='1', packageid='$pack_id' Where id='$user_id'";  
             if (mysqli_query($conn, $update)==TRUE) {
-                
-                header('location:success.php');
+                Reconect('location:success.php');
             }
 
 
