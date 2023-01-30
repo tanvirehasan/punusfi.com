@@ -44,8 +44,7 @@ include_once "controller/package/package_sql.php";
                     </div>
                     <div class="row align-items-center mb-2">
                         <div class="col-7">
-                            <h2 class="mb-0">$<?= ROI()[0] ?></h2>
-                            <p><?= ROI()[1] ?>Days</p>
+                            <h2 class="mb-0">$<?= ROI()[0] ?></h2>                            
                         </div>
                         <div class="col-5">
                             <div class="mt-n2" data-render="apexchart" data-type="bar" data-title="Visitors" data-height="30"></div>
