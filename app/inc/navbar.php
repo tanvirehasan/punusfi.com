@@ -36,6 +36,11 @@
 						</a>
 					</div>
 					<div class="menu-item">
+						<a href="sent_money.php" class="menu-link">
+							<span class="menu-text">Fund Transfer</span>
+						</a>
+					</div>
+					<div class="menu-item">
 						<a href="deposit.php" class="menu-link">
 							<span class="menu-text">Funds Withdow</span>
 						</a>
