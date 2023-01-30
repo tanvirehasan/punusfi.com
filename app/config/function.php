@@ -21,6 +21,17 @@ function UserData($U_data){
     return $row[$U_data];
 }
 
+
+//UserData
+function siteUserData($Usr_data,$username)
+{
+    $row = mysqli_fetch_array(SelectData('users', "WHERE email_id='$username' or user_name='$username' "));
+    return $row[$Usr_data];
+}
+
+
+
+
 //UserData
 function referidData($data){
     $referid = UserData('refer_id');

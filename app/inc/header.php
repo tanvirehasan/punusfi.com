@@ -1,11 +1,12 @@
 <?php
-session_start();
-if (!isset($_SESSION['user'])) {
-	header('Location:login.php');
-}
-include_once "config/conn.php";
-include_once "config/function.php";
-$userid = UserData('id');
+	session_start();
+	if (!isset($_SESSION['user'])) {
+		header('Location:login.php');
+	}
+	include_once "config/conn.php";
+	include_once "config/function.php";
+	$userid = UserData('id');
+	
 ?>
 
 <!DOCTYPE html>
