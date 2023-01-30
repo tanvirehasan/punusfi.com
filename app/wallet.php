@@ -8,7 +8,7 @@ include_once "controller/package/package_sql.php";
     <div class="row">
 
         <!-- wallet 1 -->
-        <div class="col-xl-3 col-lg-6 col-6">
+        <div class="col-xl-3 col-lg-6 ">
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
@@ -62,7 +62,7 @@ include_once "controller/package/package_sql.php";
         </div>
 
         <!-- wallet 1 -->
-        <div class="col-xl-3 col-lg-6 col-6">
+        <div class="col-xl-3 col-lg-6 ">
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
