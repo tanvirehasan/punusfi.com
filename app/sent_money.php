@@ -7,11 +7,11 @@ include_once "controller/package/package_sql.php";
 <div id="content" class="app-content">
     <div class="row ">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4"> <i class="fa fa-dollar" aria-hidden="true"></i> Funds Transfer</h1>
-            <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+            <h1 class="display-5"> <i class="fa fa-dollar" aria-hidden="true"></i> Funds Transfer</h1>
+            <p class="lead">P to P Funds Transfer</p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card p-5">
                 <form action="" method="post">
                     <div class="mb-3">

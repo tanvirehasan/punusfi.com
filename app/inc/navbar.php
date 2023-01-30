@@ -2,7 +2,7 @@
 
 	<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
 
-		<div class="menu">
+		<div class="menu pt-4">
 			<div class="menu-item active">
 				<a href="index-2.html" class="menu-link">
 					<span class="menu-icon"><i class="bi bi-cpu"></i></span>
@@ -59,16 +59,7 @@
 					<span class="menu-text">Helper</span>
 				</a>
 			</div>
-		</div>
-
-		<div class="p-3 px-4 mt-auto">
-			<a href="documentation/index.html" target="_blank" class="btn d-block btn-outline-theme">
-				<i class="fa fa-code-branch me-2 ms-n2 opacity-5"></i> Documentation
-			</a>
-		</div>
+		</div>		
 	</div>
-
 </div>
-
-
 <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>

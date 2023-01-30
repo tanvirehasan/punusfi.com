@@ -16,7 +16,7 @@ if (isset($_POST['signup_btn'])) {
     $placemnet_id = $_POST['placemnet_id'];
     $placement    = $_POST['placement'];
         
-    $insert = "INSERT INTO  users (refer_id,name,user_name,email_id,phone_no,password,pin,country,gender,placemnet_id,placement) 
+    $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`,`placemnet_id`,`placement`) 
                         VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender','$placemnet_id','$placement')
                                    
                  ";

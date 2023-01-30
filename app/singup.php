@@ -85,9 +85,9 @@
                             <div class="col-4">
                                 <select class="form-select form-select-lg bg-white bg-opacity-5" name="placement">
                                     <option>Placement</option>
-                                    <option value="A">Side A</option>
-                                    <option value="B">Side B</option>
-                                    <option value="C">Side C</option>
+                                    <option value="a">Side A</option>
+                                    <option value="b">Side B</option>
+                                    <option value="c">Side C</option>
                                 </select>
                             </div>
 
