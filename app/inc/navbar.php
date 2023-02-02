@@ -15,12 +15,21 @@
 					<span class="menu-text">Investment</span>
 				</a>
 			</div>
+
 			<div class="menu-item">
 				<a href="wallet.php" class="menu-link">
 					<span class="menu-icon"><i class="fas fa-wallet"></i></span>
 					<span class="menu-text">wallet</span>
 				</a>
 			</div>
+
+			<div class="menu-item">
+				<a href="team.php?tree=<?= UserData('user_name') ?>" class="menu-link">
+					<span class="menu-icon"><i class="fas fa-wallet"></i></span>
+					<span class="menu-text">Team</span>
+				</a>
+			</div>
+
 			<div class="menu-item has-sub">
 				<a href="#" class="menu-link">
 					<span class="menu-icon">
@@ -59,7 +68,7 @@
 					<span class="menu-text">Helper</span>
 				</a>
 			</div>
-		</div>		
+		</div>
 	</div>
 </div>
 <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
