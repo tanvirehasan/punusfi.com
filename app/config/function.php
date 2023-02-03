@@ -15,6 +15,16 @@ function UpdateData($table_name, $more){
 }
 
 
+function rowcount($TableName, $moresql)
+{
+    global $conn;
+    $sql = "SELECT * FROM $TableName $moresql";
+    $select = mysqli_query($conn, $sql);
+    $row_count = mysqli_num_rows($select);
+    return $row_count;
+}
+
+
 //UserData
 function UserData($U_data){
     $row = mysqli_fetch_array(SelectData('users',"WHERE email_id='{$_SESSION['user']}' or user_name='{$_SESSION['user']}' "));
@@ -125,10 +135,7 @@ function refericom(){
 }
 
 
-
-
 Function Genicom(){
-
     
 $userid = UserData('id');
 global $genicom;
@@ -190,14 +197,6 @@ $genicom += (0.50 / 100) * $rowg12->investmnet;
 return $genicom;
 
 }
-
-
-
-
-
-
-
-
 
 
 

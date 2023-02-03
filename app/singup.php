@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
-        header('Location:index.php');
+session_start();
+if (isset($_SESSION['user'])) {
+    header('Location:index.php');
 }
-    include "config/conn.php";
-    include "controller/user/sign_login.php";
+include "config/conn.php";
+include "controller/user/sign_login.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,54 +23,57 @@
 
     <div id="app" class="app app-full-height app-without-header">
         <div class="register">
-
             <div class="register-content">
                 <form action="" method="POST">
                     <h1 class="text-center">Sign Up</h1>
-                    <p class="text-white text-opacity-50 text-center">One Admin ID is all you need to access all the
-                        Admin services.</p>
+                    <p class="text-danger text-center">
+                        <?php if (isset($erro)) {
+                        echo "<h6 class='danger'>$erro</h6>";
+                        } ?></p>
+
+                    <div class="mb-3">
+                        <label class="form-label">User Name <span class="text-danger">*</span></label>
+                        <input type="text" name="user_name" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g name34" required />
+                    </div>
 
                     <div class="mb-3">
                         <label class="form-label">Refer Username <span class="text-danger">*</span></label>
-                        <input type="text" name="refer_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g moon2d" value="" />
+                        <input type="text" name="refer_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g moon2d" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name <span class="text-danger">*</span></label>
-                        <input type="text" name="name" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g John Smith" value="" />
+                        <input type="text" name="name" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g John Smith" required />
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">User Name <span class="text-danger">*</span></label>
-                        <input type="text" name="user_name" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g name34" value="" />
-                    </div>
+
                     <div class="mb-3">
                         <label class="form-label">Email Address <span class="text-danger">*</span></label>
-                        <input type="email" name="email_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="username@address.com" value="" />
+                        <input type="email" name="email_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="username@address.com" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Phone No.<span class="text-danger">*</span></label>
-                        <input type="text" name="phone_no" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="12345678" value="" />
+                        <input type="text" name="phone_no" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="12345678" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password <span class="text-danger">*</span></label>
-                        <input type="password" class="form-control form-control-lg bg-white bg-opacity-5" value="" />
+                        <input type="password" class="form-control form-control-lg bg-white bg-opacity-5" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
-                        <input type="password" name="password" class="form-control form-control-lg bg-white bg-opacity-5" value="" />
+                        <input type="password" name="password" class="form-control form-control-lg bg-white bg-opacity-5" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Your PIN<span class="text-danger">*</span></label>
-                        <input type="password" name="pin" class="form-control form-control-lg bg-white bg-opacity-5" value="" />
+                        <input type="password" name="pin" class="form-control form-control-lg bg-white bg-opacity-5" required />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Country <span class="text-danger">*</span></label>
-                        <select class="form-select form-select-lg bg-white bg-opacity-5" name="country">
-                            <?= cunty_list()?>
+                        <select class="form-select form-select-lg bg-white bg-opacity-5" name="country" required>
+                            <?= cunty_list() ?>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Gender <span class="text-danger">*</span></label>
-                        <select class="form-select form-select-lg bg-white bg-opacity-5" name="gender">
+                        <select class="form-select form-select-lg bg-white bg-opacity-5" name="gender" required>
                             <option>Female</option>
                             <option>Male</option>
                             <option>Others</option>
@@ -80,14 +83,14 @@
                         <label class="form-label">Placement ID <span class="text-danger">*</span></label>
                         <div class="row gx-2">
                             <div class="col-8">
-                                <input class="form-select form-select-lg bg-white bg-opacity-5" name="placemnet_id"></input>
+                                <input class="form-select form-select-lg bg-white bg-opacity-5" name="placemnet_id" required></input>
                             </div>
                             <div class="col-4">
-                                <select class="form-select form-select-lg bg-white bg-opacity-5" name="placement">
+                                <select class="form-select form-select-lg bg-white bg-opacity-5" name="placement" required>
                                     <option>Placement</option>
-                                    <option value="a">Side A</option>
-                                    <option value="b">Side B</option>
-                                    <option value="c">Side C</option>
+                                    <option value="A">Side A</option>
+                                    <option value="B">Side B</option>
+                                    <option value="C">Side C</option>
                                 </select>
                             </div>
 
@@ -95,12 +98,12 @@
                     </div>
                     <div class="mb-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="customCheck1" />
+                            <input class="form-check-input" type="checkbox" id="customCheck1" required />
                             <label class="form-check-label" for="customCheck1">I have read and agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</label>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" name="signup_btn"  class="btn btn-outline-theme btn-lg d-block w-100">Sign Up</button>
+                        <button type="submit" name="signup_btn" class="btn btn-outline-theme btn-lg d-block w-100">Sign Up</button>
                     </div>
                     <div class="text-white text-opacity-50 text-center">
                         Already have an Admin ID? <a href="login.php">Sign In</a>
@@ -110,6 +113,7 @@
 
         </div>
     </div>
+
 
     <script src="assets/js/vendor.min.js" type="21df2622481492e671e5bc02-text/javascript"></script>
     <script src="assets/js/app.min.js" type="21df2622481492e671e5bc02-text/javascript"></script>

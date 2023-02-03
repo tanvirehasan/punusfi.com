@@ -15,16 +15,34 @@ if (isset($_POST['signup_btn'])) {
     $gender       = $_POST['gender'];
     $placemnet_id = $_POST['placemnet_id'];
     $placement    = $_POST['placement'];
-        
-    $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`,`placemnet_id`,`placement`) 
-                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender','$placemnet_id','$placement')
-                                   
-                 ";
-    if (mysqli_query($conn,$insert)==TRUE) {
-        header('location:login.php');
+
+    if (rowcount('users', "where refer_id ='$refer_id'") > 0) { 
+            if (rowcount('users',"where user_name ='$user_name'")==0) {        
+                    $data =SelectData('team_tree', "where plecement_id='$placemnet_id'");
+                    $row = $data->fetch_object();
+                    if($row->$placement == NULL ){
+
+                        $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`) 
+                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender')";
+                        if (mysqli_query($conn, $insert) == TRUE) {
+                            if (rowcount('team_tree', "where plecement_id ='$placemnet_id'")==0) {
+                                mysqli_query($conn, "INSERT INTO team_tree (plecement_id,`$placement`) VALUES ('$placemnet_id','$placement')");
+                            }else{
+                                mysqli_query($conn, "UPDATE team_tree SET `plecement_id`='$placemnet_id', `$placement`='$placement' ");
+                            }
+                            header('location:login.php?mess=Success');
+                        } else {
+                            $erro = "Sorry!";
+                        }
+
+                    }else{$erro = $placement." Is not empty ";}
+            }else{
+                $erro = $user_name . "UserName Already Exists";
+            }
     }else{
-        $mess="Sorry!";
-    }
+            $erro = $refer_id . " Referral Don't Match ";
+        }
+
 }
 
 
@@ -46,10 +64,10 @@ if (isset($_POST['signup_btn'])) {
                    $_SESSION['user']=$result->user_name;
                     Reconect('index.php');                
                 }else{
-                    $mess =  "Password does not match.";
+                $mess =  "Password does not match.";
                 }                
             }else{
-                $mess = "User name not match";
+            $mess = "User name not match";
             }
           
        }else{

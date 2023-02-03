@@ -29,6 +29,9 @@
                     <h1 class="text-center">Sign In</h1>
                     <div class="text-white text-opacity-50 text-center mb-4">
                         For your protection, please verify your identity.
+
+                        <?php if(isset($mess)){echo $mess;} ?>
+
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Email Address <span class="text-danger">*</span></label>
