@@ -26,9 +26,9 @@ if (isset($_POST['signup_btn'])) {
                         VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender')";
                         if (mysqli_query($conn, $insert) == TRUE) {
                             if (rowcount('team_tree', "where plecement_id ='$placemnet_id'")==0) {
-                                mysqli_query($conn, "INSERT INTO team_tree (plecement_id,`$placement`) VALUES ('$placemnet_id','$placement')");
+                                mysqli_query($conn, "INSERT INTO team_tree (`plecement_id`,`$placement`) VALUES ('$placemnet_id','$user_name')");
                             }else{
-                                mysqli_query($conn, "UPDATE team_tree SET `plecement_id`='$placemnet_id', `$placement`='$placement' ");
+                                mysqli_query($conn, "UPDATE team_tree SET  `$placement`='$user_name' WHERE `plecement_id`='$placemnet_id' ");
                             }
                             header('location:login.php?mess=Success');
                         } else {
