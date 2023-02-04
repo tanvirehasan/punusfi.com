@@ -16,7 +16,7 @@ if (isset($_POST['signup_btn'])) {
     $placemnet_id = $_POST['placemnet_id'];
     $placement    = $_POST['placement'];
 
-    if (rowcount('users', "where refer_id ='$refer_id'") > 0) { 
+    if (rowcount('users', "where user_name ='$refer_id'") > 0) { 
             if (rowcount('users',"where user_name ='$user_name'")==0) {        
                     $data =SelectData('team_tree', "where plecement_id='$placemnet_id'");
                     $row = $data->fetch_object();
