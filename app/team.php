@@ -2,7 +2,7 @@
 include_once 'inc/header.php';
 include_once "inc/navbar.php";
 
-$leader = "Moon";
+$leader = $_GET['tree'];
 
 $A = Team_Tree('A', $leader);
 $B = Team_Tree('B', $leader);
@@ -17,12 +17,12 @@ $C = Team_Tree('C', $leader);
   <div class="row text-center">
     <div class="col-12 text-center py-5">
       <img class='p-1' src='assets/img/businessman.png' width='20%'>
-      <p class="h3"><?= $leader ?></p>
+      <p class="h3"><a class="nav-link" href="team.php?tree=<?= $leader ?>"><?= $leader ?></a></p>
     </div>
     <!-- Team A  -->
     <div class="col-4  ">
       <?= ($A != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-      <p class="h3"><?= $A ?></p>
+      <p class="h3"> <a class="nav-link" href="team.php?tree=<?= $A ?>"><?= $A ?></a></p>
 
       <div class="row py-5">
         <!-- A>A  -->
@@ -30,7 +30,7 @@ $C = Team_Tree('C', $leader);
           <?php
           $AA = Team_Tree('A', $A);
           echo ($AA != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-          <p class="h5"><?= $AA ?></p>
+          <p class="h5"><a class="nav-link" href="team.php?tree=<?= $AA ?>"><?= $AA ?> </a> </p>
           <div class="row pt-5">
             <div class="col-4 "><?php echo $AAA = Team_Tree('A', $AA); ?></div>
             <div class="col-4 "><?php echo $AAB = Team_Tree('B', $AA); ?></div>
@@ -43,7 +43,7 @@ $C = Team_Tree('C', $leader);
           <?php
           $AB = Team_Tree('B', $A);
           echo ($AB != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-          <p class="h5"><?= $AB ?></p>
+          <p class="h5"><a class="nav-link" href="team.php?tree=<?= $AB ?>"><?= $AB ?></a></p>
           <div class="row py-5">
             <div class="col-4 "><?php echo $ABA = Team_Tree('A', $AB); ?></div>
             <div class="col-4 "><?php echo $ABB = Team_Tree('B', $AB); ?></div>
@@ -56,7 +56,7 @@ $C = Team_Tree('C', $leader);
           <?php
           $AC = Team_Tree('C', $A);
           echo ($AC != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-          <p class="h5"><?= $AC ?></p>
+          <p class="h5"><a class="nav-link" href="team.php?tree=<?= $AC ?>"><?= $AC ?></a></p>
           <div class="row py-5">
             <div class="col-4 "><?php echo $ABA = Team_Tree('A', $AC); ?></div>
             <div class="col-4 "><?php echo $ABB = Team_Tree('B', $AC); ?></div>
@@ -69,14 +69,14 @@ $C = Team_Tree('C', $leader);
     <!--======== Team B =========================== -->
     <div class="col-4  ">
       <?= ($B != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-      <p class="h3"><?= $B ?></p>
+      <p class="h3"><a class="nav-link" href="team.php?tree=<?= $B ?>"><?= $B ?></a></p>
       <div class="row pt-5 ">
         <!-- A>A  -->
         <div class="col-4 ">
           <?php
           $BA = Team_Tree('A', $B);
           echo ($BA != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-          <p class="h5"><?= $BA ?></p>
+          <p class="h5"><a class="nav-link" href="team.php?tree=<?= $BA ?>"><?= $BA ?></a></p>
           <div class="row py-5">
             <div class="col-4 "><?php echo $BAA = Team_Tree('A', $BA); ?></div>
             <div class="col-4 "><?php echo $BAB = Team_Tree('B', $BA); ?></div>
@@ -116,7 +116,7 @@ $C = Team_Tree('C', $leader);
     <!--============ Team C ================= -->
     <div class="col-4  ">
       <?= ($C != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
-      <p class="h3"><?= $C ?></p>
+      <p class="h3"><a class="nav-link" href="team.php?tree=<?= $C ?>"><?= $C ?></a></p>
       <div class="row pt-5">
         <!-- A>A  -->
         <div class="col-4 ">
