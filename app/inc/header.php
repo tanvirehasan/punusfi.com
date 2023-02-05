@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
 	<meta charset="utf-8" />
@@ -30,7 +30,7 @@
 		<div id="header" class="app-header">
 			<div class="desktop-toggler">
 				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
-					<span class="bar"></span>
+					<span class="bar" width='100%'></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
 				</button>

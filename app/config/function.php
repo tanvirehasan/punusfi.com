@@ -71,6 +71,21 @@ function PackageData($pack_data){
 }
 
 
+
+function Team_Tree($data, $plecement_id){
+    if(rowcount('team_tree', "WHERE plecement_id='$plecement_id' ")>0){
+        $row = mysqli_fetch_array(SelectData('team_tree', "WHERE plecement_id='$plecement_id' "));
+        $data= $row[$data];
+        return ($data=='') ? '+' : $data;        
+    }else{
+        return '+';
+    }
+}
+
+
+
+
+
 // balunce ============================
 
 
