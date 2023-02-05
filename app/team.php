@@ -2,7 +2,7 @@
 include_once 'inc/header.php';
 include_once "inc/navbar.php";
 
-$leader ='Moon';
+$leader = $_GET['tree'];
 
 $A = Team_Tree('A', $leader);
 $B = Team_Tree('B', $leader);
@@ -21,7 +21,7 @@ $C = Team_Tree('C', $leader);
     </div>
     <!-- Team A  -->
     <div class="col-4  ">
-      <?= ($A != 0) ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
+      <?= ($A != '0') ? "<img class='p-1' src='assets/img/businessman.png' width='50%'>" : "<img class='p-1' src='assets/img/add-user.png' width='100%'>";  ?>
       <p class="h3"> <a class="nav-link" href="team.php?tree=<?= $A ?>"><?= $A ?></a></p>
 
       <div class="row py-5">
