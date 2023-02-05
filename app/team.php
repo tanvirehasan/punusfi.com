@@ -2,7 +2,7 @@
 include_once 'inc/header.php';
 include_once "inc/navbar.php";
 
-$leader = $_GET['tree'];
+$leader ='Moon';
 
 $A = Team_Tree('A', $leader);
 $B = Team_Tree('B', $leader);
