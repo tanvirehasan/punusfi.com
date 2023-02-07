@@ -1,13 +1,19 @@
 <?php
-include "inc/header.php";
-include "inc/navbar.php";
+include_once "inc/header.php";
+include_once "inc/navbar.php";
 include_once "controller/package/package_sql.php";
+
+()
+
+
+
 ?>
+
+
+
 
 <div id="content" class="app-content">
     <div class="row">
-
-        <?php if (UserData('packageid') == 0) { ?>
 
             <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                 <h1 class="display-4">Choose Your Package</h1>
@@ -53,15 +59,8 @@ include_once "controller/package/package_sql.php";
                         </div>
                     </form>
                 </div>
-            <?php }
-        } else { ?>
-            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 class="display-1 text-success">Thank You!</h1>
-                <h4 class="display-4 ">Your Investment Successfully Done.</h4>
-
-                <p class="lead"></p>
-            </div>
-        <?php } ?>
+            <?php } ?>
+        
     </div>
 </div>
 <?php include "inc/footer.php"; ?>
