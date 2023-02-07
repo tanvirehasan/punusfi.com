@@ -1,18 +1,17 @@
 <?php
-	session_start();
-	date_default_timezone_set('Asia/Dubai');
-	
-	if (!isset($_SESSION['user'])) {
-		header('Location:login.php');
-	}
-	include_once "config/conn.php";
-	include_once "config/function.php";
-	$userid = UserData('id');
-	
+session_start();
+date_default_timezone_set('Asia/Dubai');
+
+if (!isset($_SESSION['user'])) {
+	header('Location:login.php');
+}
+include_once "config/conn.php";
+include_once "config/function.php";
+$userid = UserData('id');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
 	<meta charset="utf-8" />
@@ -22,6 +21,7 @@
 	<meta name="author" content="" />
 	<link href="assets/css/vendor.min.css" rel="stylesheet" />
 	<link href="assets/css/app.min.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
 </head>
 
