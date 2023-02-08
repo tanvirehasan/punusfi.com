@@ -13,7 +13,7 @@ if (isset($_POST['sentmoney'])) {
     $trnx_amount = $_POST['trnx_amount'];
 
     if (rowcount('users', "where id ='$recvied_id'") > 0) {
-        if (Current_balance() >= $trnx_amount) {
+        if (Current_balance() >= $trnx_amount AND $trnx_amount>0) {
             $insert  = "INSERT INTO cash_in_out (sent_id, recvied_id,trnx_amount, trnx_datetime) VALUES ('$sent_id','$recvied_id','$trnx_amount',NOW() )";
             if (mysqli_query($conn, $insert) == TRUE) {
                 Reconect('success.php');
@@ -50,7 +50,7 @@ if (isset($_POST['sentmoney'])) {
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Amount </label>
-                        <input type="number" class="form-control form-control-lg bg-white bg-opacity-5" name="trnx_amount" required>
+                        <input type="number" min="5" class="form-control form-control-lg bg-white bg-opacity-5" name="trnx_amount" required>
                     </div>
 
                     <input type="submit" value="Submit" name="sentmoney" class="btn btn-outline-theme btn-lg d-block mt-5 ">
