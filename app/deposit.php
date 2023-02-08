@@ -45,18 +45,18 @@ include_once "controller/package/package_sql.php";
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 mt-5 mt-md-0">
             <h3 class="pb-2"><img src="assets/img/btc.svg"> BTC Wallet</h3>
             <img src="assets/img/btc.PNG" width="100%">
-            <div class="d-flex p-0 m-0 mt-3">
+            <div class="d-flex p-0 m-0 mt-5">
                 <input type="text" id="copy-id" value="1DvLCXE41hPKJZSCj9h4k9g1CX1rm8AU2j" class="form-control w-75">
                 <button id="click-to-copy" class="btn btn-sm btn-outline-theme p-3">COPY</button>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 mt-5 mt-md-0">
             <h3 class="pb-2"><img src="assets/img/usdt.svg"> USDT Wallet</h3>
             <img src="assets/img/usdt.PNG" width="100%">
-            <div class="d-flex p-0 m-0 mt-3">
+            <div class="d-flex p-0 m-0 mt-5">
                 <input type="text" id="copy-id2" value="TQwHvNTmkyLZa8VoTWPL6vjaHpH6NknQvc" class="form-control w-75">
                 <button id="click-to-copy2" class="btn btn-sm btn-outline-theme p-3">COPY</button>
             </div>
