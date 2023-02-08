@@ -146,7 +146,7 @@ function refericom(){
     $row = mysqli_fetch_array($select);
     $totalrefer = $row['refer'];  
     $refernet = (5/100)*$totalrefer;
-    return $refernet;
+    return (UserData('stutas') == 1) ? $refernet : 0;
 }
 
 
@@ -209,7 +209,7 @@ $genicom += (0.50 / 100) * $rowg12->investmnet;
 
 }}}}}}}}}}}}
 
-return $genicom;
+return (UserData('stutas')==1)? $genicom:0;
 
 }
 
