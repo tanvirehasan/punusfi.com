@@ -35,7 +35,7 @@ function UserData($U_data){
 //UserData
 function siteUserData($Usr_data,$username)
 {
-    $row = mysqli_fetch_array(SelectData('users', "WHERE email_id='$username' or user_name='$username' "));
+    $row = mysqli_fetch_array(SelectData('users', "WHERE email_id='$username' or user_name='$username' or id='$username' "));
     return $row[$Usr_data];
 }
 

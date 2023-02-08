@@ -22,8 +22,8 @@ if (isset($_POST['signup_btn'])) {
                     $row = $data->fetch_object();
                     if($row->$placement == '' ){
 
-                        $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`) 
-                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender')";
+                        $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`,`join_date`) 
+                        VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender',NOW())";
                         if (mysqli_query($conn, $insert) == TRUE) {
                             if (rowcount('team_tree', "where plecement_id ='$placemnet_id'")==0) {
                                 mysqli_query($conn, "INSERT INTO team_tree (`plecement_id`,`$placement`) VALUES ('$placemnet_id','$user_name')");

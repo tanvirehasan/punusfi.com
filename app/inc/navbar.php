@@ -50,11 +50,27 @@
 				</a>
 			</div>
 
-			<div class="menu-item">
-				<a href="sent_money.php" class="menu-link">
-					<span class="menu-icon"><i class="fas fa-exchange-alt"></i></span>
-					<span class="menu-text">TRANSFER</span>
+
+			<div class="menu-item has-sub">
+				<a href="" class="menu-link">
+					<span class="menu-icon">
+						<i class="fas fa-exchange-alt"></i>
+					</span>
+					<span class="menu-text">transaction</span>
+					<span class="menu-caret"><b class="caret"></b></span>
 				</a>
+				<div class="menu-submenu">
+					<div class="menu-item">
+						<a href="sent_money.php" class="menu-link">
+							<span class="menu-text">Transaction</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="trnx_list.php" class="menu-link">
+							<span class="menu-text">transaction HISTORY</span>
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<div class="menu-item has-sub">
@@ -136,7 +152,6 @@
 							<span class="menu-text">TICKET HISTORY</span>
 						</a>
 					</div>
-
 				</div>
 			</div>
 

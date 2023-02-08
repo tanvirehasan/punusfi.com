@@ -23,6 +23,7 @@ $userid = UserData('id');
 	<link href="assets/css/app.min.css" rel="stylesheet" />
 	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -196,7 +197,8 @@ $userid = UserData('id');
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
-						<a class="dropdown-item d-flex align-items-center" href="profile.php">PROFILE <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
+
+						<a class="dropdown-item d-flex align-items-center" href="profile.php"><?= UserData('user_name') ?> <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i></a>
 						<!-- <a class="dropdown-item d-flex align-items-center" href="email_inbox.html">INBOX <i class="bi bi-envelope ms-auto text-theme fs-16px my-n1"></i></a>
 						<a class="dropdown-item d-flex align-items-center" href="calendar.html">CALENDAR <i class="bi bi-calendar ms-auto text-theme fs-16px my-n1"></i></a>
 						<a class="dropdown-item d-flex align-items-center" href="settings.html">SETTINGS <i class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i></a>
