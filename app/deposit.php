@@ -53,7 +53,7 @@ include_once "controller/package/package_sql.php";
                 <button id="click-to-copy" class="btn btn-sm btn-outline-theme p-3">COPY</button>
             </div>
         </div>
-        <div class="col-md-3 mt-5 mt-md-0">
+        <div class="col-md-3 mt-5 mb-5  mb-md-0 mt-md-0">
             <h3 class="pb-2"><img src="assets/img/usdt.svg"> USDT Wallet</h3>
             <img src="assets/img/usdt.PNG" width="100%">
             <div class="d-flex p-0 m-0 mt-5">
