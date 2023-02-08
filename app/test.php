@@ -10,5 +10,4 @@ $headers = "From: team@punusfi.com" . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 
-
 ?>
