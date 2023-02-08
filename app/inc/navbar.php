@@ -97,7 +97,7 @@
 			</div>
 
 			<div class="menu-item">
-				<a href="" class="menu-link">
+				<a href="referlist.php" class="menu-link">
 					<span class="menu-icon"><i class="fas fa-users"></i></span>
 					<span class="menu-text">REFERRAL LIST</span>
 				</a>
