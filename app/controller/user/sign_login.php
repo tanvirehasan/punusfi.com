@@ -20,7 +20,7 @@ if (isset($_POST['signup_btn'])) {
             if (rowcount('users',"where user_name ='$user_name'")==0) {        
                     $data =SelectData('team_tree', "where plecement_id='$placemnet_id'");
                     $row = $data->fetch_object();
-                    if($row->$placement == NULL ){
+                    if($row->$placement == '' ){
 
                         $insert = "INSERT INTO  users (`refer_id`,`name`,`user_name`,`email_id`,`phone_no`,`password`,`pin`,`country`,`gender`) 
                         VALUES ('$refer_id','$name','$user_name','$email_id','$phone_no','$password','$pin','$country','$gender')";
@@ -30,7 +30,10 @@ if (isset($_POST['signup_btn'])) {
                             }else{
                                 mysqli_query($conn, "UPDATE team_tree SET  `$placement`='$user_name' WHERE `plecement_id`='$placemnet_id' ");
                             }
-                            header('location:login.php?mess=Success');
+
+                            $sing = "Success";
+                            
+
                         } else {
                             $erro = "Sorry!";
                         }
