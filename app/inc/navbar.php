@@ -31,28 +31,28 @@
 
 			<div class="menu-item">
 				<a href="packge.php" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-gem"></i></span>
+					<span class="menu-icon"><i class="fas fa-shopping-basket"></i></span>
 					<span class="menu-text">PURCHASE</span>
 				</a>
 			</div>
 
 			<div class="menu-item">
 				<a href="deposit.php" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-gem"></i></span>
+					<span class="menu-icon"><i class="fas fa-money-check-alt"></i></span>
 					<span class="menu-text">DEPOSIT</span>
 				</a>
 			</div>
 
 			<div class="menu-item">
 				<a href="" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-gem"></i></span>
+					<span class="menu-icon"><i class="fas fa-sack-dollar"></i></span>
 					<span class="menu-text">WITHDRAW</span>
 				</a>
 			</div>
 
 			<div class="menu-item">
 				<a href="sent_money.php" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-gem"></i></span>
+					<span class="menu-icon"><i class="fas fa-exchange-alt"></i></span>
 					<span class="menu-text">TRANSFER</span>
 				</a>
 			</div>
@@ -60,7 +60,7 @@
 			<div class="menu-item has-sub">
 				<a href="#" class="menu-link">
 					<span class="menu-icon">
-						<i class="bi bi-envelope"></i>
+						<i class="fas fa-comment-dollar"></i>
 					</span>
 					<span class="menu-text">INCOME DETAILS</span>
 					<span class="menu-caret"><b class="caret"></b></span>
@@ -98,21 +98,21 @@
 
 			<div class="menu-item">
 				<a href="" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+					<span class="menu-icon"><i class="fas fa-users"></i></span>
 					<span class="menu-text">REFERRAL LIST</span>
 				</a>
 			</div>
 
 			<div class="menu-item">
 				<a href="team.php?tree=<?= UserData('user_name'); ?>" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+					<span class="menu-icon"><i class="fas fa-folder-tree"></i></span>
 					<span class="menu-text">TREE VIEW </span>
 				</a>
 			</div>
 
 			<div class="menu-item">
 				<a href="" class="menu-link">
-					<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+					<span class="menu-icon"><i class="fas fa-toolbox"></i></span>
 					<span class="menu-text">PACKAGE STATUS</span>
 				</a>
 			</div>
@@ -120,7 +120,7 @@
 			<div class="menu-item has-sub">
 				<a href="#" class="menu-link">
 					<span class="menu-icon">
-						<i class="bi bi-envelope"></i>
+						<i class="fas fa-headset"></i>
 					</span>
 					<span class="menu-text">SUPPORT</span>
 					<span class="menu-caret"><b class="caret"></b></span>

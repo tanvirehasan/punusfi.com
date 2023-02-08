@@ -106,7 +106,7 @@ include "controller/user/sign_login.php";
                         <button type="submit" name="signup_btn" class="btn btn-outline-theme btn-lg d-block w-100">Sign Up</button>
                     </div>
                     <div class="text-white text-opacity-50 text-center">
-                        Already have an Admin ID? <a href="login.php">Sign In</a>
+                        Already have an ID? <a href="login.php">Sign In</a>
                     </div>
                 </form>
             </div>
