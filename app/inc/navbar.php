@@ -127,7 +127,7 @@
 			</div>
 
 			<div class="menu-item">
-				<a href="" class="menu-link">
+				<a href="packge_status.php" class="menu-link">
 					<span class="menu-icon"><i class="fas fa-toolbox"></i></span>
 					<span class="menu-text">PACKAGE STATUS</span>
 				</a>
