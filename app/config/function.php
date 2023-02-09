@@ -226,10 +226,9 @@ function withdrawal(){
 
 
 //eamil
-function email_send($subject, $title, $text, $receiver)
-{
-
-    $body = "<!DOCTYPE html>
+function email_send($subject, $title, $text, $receiver){
+	  
+$body ="<!DOCTYPE html>
 <html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:o='urn:schemas-microsoft-com:office:office'>
 <head>
 	<meta charset='UTF-8'>
@@ -255,8 +254,8 @@ function email_send($subject, $title, $text, $receiver)
 							<table role='presentation' style='width:100%;border-collapse:collapse;border:0;border-spacing:0;'>
 								<tr>
 									<td style='padding:0 0 36px 0;color:#153643;'>
-										<h1 style='font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;'>" . $title . "</h1>
-										<p style='margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;'>" . $text . "</p>
+										<h1 style='font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;'>".$title."</h1>
+										<p style='margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;'>".$text."</p>
 									</td>
 								</tr>
 							</table>
@@ -268,7 +267,7 @@ function email_send($subject, $title, $text, $receiver)
 								<tr>
 									<td style='padding:0;width:50%;' align='left'>
 										<p style='margin:0;font-size:14px;line-height:16px;font-family:Arial,sans-serif;color:#ffffff;'>
-											© (BOLD) Bangladesh Organization for Learning & Development " . date('Y') . "<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
+											© (BOLD) Bangladesh Organization for Learning & Development ".date('Y')."<br/><a href='http://www.example.com' style='color:#ffffff;text-decoration:underline;'>Unsubscribe</a>
 										</p>
 									</td>
 									<td style='padding:0;width:50%;' align='right'>
@@ -299,34 +298,34 @@ function email_send($subject, $title, $text, $receiver)
 
     include('smtp/PHPMailerAutoload.php');
 
-    $mail = new PHPMailer();
-    $mail->SMTPDebug  = 1;
-    $mail->IsSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'tls';
-    $mail->Host = "mail.punusfi.com";
-    $mail->Port = 465;
-    $mail->IsHTML(true);
-    $mail->CharSet = 'UTF-8';
-    $mail->Username = "team@punusfi.com";
-    $mail->Password = "TaNVIR@@114";
-    $mail->SetFrom("team@punusfi.com", "PUNUS");
-    // $mail->addBCC("team@bold.org.bd", "BOLD Team");
-    $mail->Subject = $subject;
-    $mail->Body = $body;
-    $mail->AddAddress($receiver);
-    $mail->SMTPOptions = array('ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => false
-    ));
-    if (!$mail->Send()) {
-        $mail->ErrorInfo;
-    } else {
-        return 'Sent';
-    }
-
-    return $body;
+	$mail = new PHPMailer(); 
+	$mail->SMTPDebug  = 1;
+	$mail->IsSMTP(); 
+	$mail->SMTPAuth = true; 
+	$mail->SMTPSecure = 'tls'; 
+	$mail->Host = "smtp.google.com";
+	$mail->Port = 587; 
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->Username = "support@punusfi.com";
+	$mail->Password = "kyobdujlhkoajqvw";
+	$mail->SetFrom("support@punusfi.com", "Punus");
+	// $mail->addBCC("team@bold.org.bd", "BOLD Team");
+	$mail->Subject = $subject;
+	$mail->Body =$body;
+	$mail->AddAddress($receiver);
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if(!$mail->Send()){
+		$mail->ErrorInfo;
+	    }else{
+		return 'Sent';
+	}
+	
+	return $body;
 }
 
 
