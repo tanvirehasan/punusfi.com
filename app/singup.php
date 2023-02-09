@@ -118,7 +118,8 @@ include "controller/user/sign_login.php";
 
                 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                     <h1 class="display-4">Success!</h1>
-                    <p class="lead">Your Registration Successfully Done!</p>
+                    <p class="lead">Congratulations on your Successful Registration!</p>
+                    <P>Please check your email</P>
                     <a href="login.php">Login</a>
                 </div>
 
