@@ -165,7 +165,7 @@
 				</a>
 			</div>
 
-			<div class="menu-item has-sub">
+			<!-- <div class="menu-item has-sub">
 				<a href="#" class="menu-link">
 					<span class="menu-icon">
 						<i class="fas fa-headset"></i>
@@ -185,7 +185,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</div>
