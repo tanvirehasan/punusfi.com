@@ -14,23 +14,17 @@ if (isset($_POST['withdraw'])) {
 
     if ($pin == UserData('pin')) {
         $insert  = "INSERT INTO withdraw (username,amount,withdrow_type,wallet_bank,pin,date_time) VALUES ('$username','$amount','$withdrow_type','$wallet_bank','$pin',NOW() )";
-        if(mysqli_query($conn, $insert)==TRUE){
+        if (mysqli_query($conn, $insert) == TRUE) {
             Reconect('withdrawal_list.php');
-        }else{
+        } else {
             $mess = "SORRY! Something Wrong";
         }
-
     } else {
         $mess = "Your PIN not Match";
     }
 }
 
-
-
-echo 
-
-
-
+$disabled = (date('l') != 'Saturday') ? 'disabled' : '';
 
 ?>
 
@@ -43,6 +37,7 @@ echo
     <div class="row">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Withdrawal</h1>
+            <p class="text-warning" >Attention all users: Please note that the withdraw function is only available on Saturdays. We apologize for any inconvenience this may cause and appreciate your understanding. Thank you for your continued support.</p>
             <?php if (isset($mess)) {
                 echo " <h4 class='text-danger'>" . $mess . "</h4> ";
             } ?>
@@ -75,7 +70,7 @@ echo
                         <label class="form-label"> Your PIN </label>
                         <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="pin">
                     </div>
-                    <input type="submit" value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
+                    <input type="submit" <?= $disabled ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>
                 <div class="card-arrow">
                     <div class="card-arrow-top-left"></div>
