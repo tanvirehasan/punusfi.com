@@ -303,7 +303,7 @@ $body ="<!DOCTYPE html>
 	$mail->IsSMTP(); 
 	$mail->SMTPAuth = true; 
 	$mail->SMTPSecure = 'tls'; 
-	$mail->Host = "smtp.google.com";
+	$mail->Host = "smtp.gmail.com";
 	$mail->Port = 587; 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
