@@ -5,10 +5,11 @@ include_once "inc/navbar.php";
 
 if(isset($_POST['profile_update'])){
     $name=$_POST['name'];
+    $name = $_POST['email_id'];    
     $phone_no = $_POST['phone_no'];
     $country = $_POST['country'];
 
-    $update = "UPDATE users SET `name`='$name',`phone_no`='$phone_no',`country`='$country' WHERE id='$userid'";
+    $update = "UPDATE users SET `name`='$name', `email_id`='$email_id',`phone_no`='$phone_no',`country`='$country' WHERE id='$userid'";
     if($conn->query($update)==TRUE){
         Reconect('profile.php');
     }else{
@@ -59,7 +60,7 @@ if(isset($_POST['profile_update'])){
                         <td>
                             <p class="p-0 m-0 fs-3">Email:</p>
                         </td>
-                        <td><input type="text" disabled class="form-control border-0 fs-3 p-0 m-0" value="<?= UserData('email_id') ?>"></td>
+                        <td><input type="text" name="eamil" class="form-control border-0 fs-3 p-0 m-0" value="<?= UserData('email_id') ?>"></td>
                     </tr>
 
                     <tr>
