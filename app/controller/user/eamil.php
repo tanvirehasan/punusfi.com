@@ -1,13 +1,13 @@
 <?php
 
-    include('config/function.php');
 
-    email_send("Congratulations on your successful registration!",
+email_send(
+    "Congratulations on your successful registration!",
 
-    "Congratulations",
+    "Congratulations!",
     "
     
-       Dear [Name],<br><br>
+       Dear ". $name . ",<br><br>
 
         We would like to extend our warmest congratulations on your successful registration with us! We are so glad to have you as a member of our community. <br><br>
 
@@ -17,12 +17,16 @@
 
         Once again, congratulations on your successful registration. We are excited to have you with us!
 
-        <br><br>Best regards,
-        <br><br>
-        [Your Name]<br>
-        [Company Name]   
+        <br><br><b>Best regards,</b>
+        <br>
+        Team<br>
+        Punus Finance International   
     
-    ",
-    "mdmoon811@gmail.com");
+    ", $email_id
+);
+
+
+
+
 
 ?>

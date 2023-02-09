@@ -31,6 +31,7 @@ if (isset($_POST['signup_btn'])) {
                                 mysqli_query($conn, "UPDATE team_tree SET  `$placement`='$user_name' WHERE `plecement_id`='$placemnet_id' ");
                             }
 
+                            require 'eamil.php';
                             $sing = "Success";
                             
 
