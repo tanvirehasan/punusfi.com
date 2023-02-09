@@ -11,7 +11,7 @@ include "inc/navbar.php";
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">Current </span>
+                        <span class="flex-grow-1 fs-3">Current </span>
                         <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
                     </div>
                     <div class="row align-items-center mb-2">
@@ -38,7 +38,7 @@ include "inc/navbar.php";
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">ROI</span>
+                        <span class="flex-grow-1 fs-3">ROI</span>
                         <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
                     </div>
                     <div class="row align-items-center mb-2">
@@ -64,7 +64,7 @@ include "inc/navbar.php";
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">Refer</span>
+                        <span class="flex-grow-1 fs-3">Refer</span>
                         <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
                     </div>
                     <div class="row align-items-center mb-2">
@@ -91,12 +91,12 @@ include "inc/navbar.php";
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">Gen</span>
+                        <span class="flex-grow-1 fs-3">Gen</span>
                         <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
                     </div>
                     <div class="row align-items-center mb-2">
                         <div class="col-7">
-                            <h3 class="mb-0">$ <?= $gen=Genicom(); ?></h3>
+                            <h3 class="mb-0">$ <?= $gen = Genicom(); ?></h3>
                         </div>
                         <div class="col-5">
                             <div class="mt-n2" data-render="apexchart" data-type="bar" data-title="Visitors" data-height="30"></div>
@@ -118,17 +118,17 @@ include "inc/navbar.php";
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="d-flex fw-bold small mb-3">
-                        <span class="flex-grow-1">Withdrawal</span>
+                        <span class="flex-grow-1 fs-3">Withdrawal</span>
                         <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="bi bi-fullscreen"></i></a>
                     </div>
                     <div class="row align-items-center mb-2">
                         <div class="col-7">
-                            <h3 class="mb-0">$ <?php 
+                            <h3 class="mb-0">$ <?php
 
-                                $totalicome= $gen+ ROI()[0]+ refericom();
-                                echo $netblance= $totalicome-withdrawal();
-                            
-                            ?></h3>
+                                                $totalicome = $gen + ROI()[0] + refericom();
+                                                echo $netblance = $totalicome - withdrawal();
+
+                                                ?></h3>
                         </div>
                         <div class="col-5">
                             <div class="mt-n2" data-render="apexchart" data-type="bar" data-title="Visitors" data-height="30"></div>
