@@ -175,7 +175,7 @@
 				</a>
 				<div class="menu-submenu">
 					<div class="menu-item">
-						<a href="to:team@punusfi.com" class="menu-link">
+						<a href="mailto:team@punusfi.com" class="menu-link">
 							<span class="menu-text">Email</span>
 						</a>
 					</div>
