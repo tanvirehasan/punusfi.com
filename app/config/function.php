@@ -308,7 +308,7 @@ $body = "<!DOCTYPE html>
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
 	$mail->Username = "support@punusfi.com";
-	$mail->Password = "wsaoumxcdacoqpmp";
+	$mail->Password = "hfcwwkxtzdqqennx";
 	$mail->SetFrom("support@punusfi.com", "Punus Finance International");
 	$mail->Subject = $subject;
 	$mail->Body =$body;
