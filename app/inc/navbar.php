@@ -36,11 +36,27 @@
 				</a>
 			</div>
 
-			<div class="menu-item">
-				<a href="deposit.php" class="menu-link">
-					<span class="menu-icon"><i class="fas fa-money-check-alt"></i></span>
+
+			<div class="menu-item has-sub">
+				<a href="#" class="menu-link">
+					<span class="menu-icon">
+						<i class="fas fa-money-check-alt"></i>
+					</span>
 					<span class="menu-text">DEPOSIT</span>
+					<span class="menu-caret"><b class="caret"></b></span>
 				</a>
+				<div class="menu-submenu">
+					<div class="menu-item">
+						<a href="deposit.php" class="menu-link">
+							<span class="menu-text">DEPOSIT</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="deposit_list.php" class="menu-link">
+							<span class="menu-text">DEPOSIT HISTORY</span>
+						</a>
+					</div>
+				</div>
 			</div>
 
 

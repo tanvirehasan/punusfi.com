@@ -1,7 +1,6 @@
 <?php
 include "inc/header.php";
 include "inc/navbar.php";
-include_once "controller/package/package_sql.php";
 ?>
 
 <div id="content" class="app-content">

@@ -6,7 +6,7 @@ include "inc/navbar.php";
 <div id="content" class="app-content">
     <div class="row">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto ">
-            <h1 class="display-4">Withdrawal List</h1>
+            <h1 class="display-4">Deposit List</h1>
         </div>
         <div class="12">
 
@@ -16,7 +16,7 @@ include "inc/navbar.php";
                     <th>Name</th>
                     <th>Amount</th>
                     <th>Type</th>
-                    <th>Wallet/Bank</th>
+                    <th>Transaction id</th>
                     <th>Date</th>
                     <th>Status</th>
                 </tr>
@@ -24,15 +24,15 @@ include "inc/navbar.php";
                 <?php
                 $i = 1;
                 $username = UserData('user_name');
-                $data = SelectData('withdraw', "where username='$username'");
+                $data = SelectData('addfund', "where userid='$username'");
                 while ($row = $data->fetch_object()) { ?>
                     <tr>
                         <td><?= $i++; ?></td>
-                        <td><?= $row->username; ?></td>
+                        <td><?= $row->userid; ?></td>
                         <td><?= $row->amount; ?></td>
-                        <td><?= $row->withdrow_type; ?></td>
-                        <td><?= $row->wallet_bank; ?></td>
-                        <td><?= $row->date_time; ?></td>
+                        <td><?= $row->payment_type; ?></td>
+                        <td><?= $row->tanxid; ?></td>
+                        <td><?= $row->datetimeaddmone; ?></td>
                         <td><?= ($row->stutas == 1) ? " <p class='text-success p-0 m-0'>Success</p> " : "<p class='text-danger p-0 m-0'>Pending</p>"; ?></td>
                     </tr>
 
