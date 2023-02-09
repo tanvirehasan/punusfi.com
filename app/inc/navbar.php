@@ -165,7 +165,7 @@
 				</a>
 			</div>
 
-			<!-- <div class="menu-item has-sub">
+			<div class="menu-item has-sub">
 				<a href="#" class="menu-link">
 					<span class="menu-icon">
 						<i class="fas fa-headset"></i>
@@ -175,17 +175,17 @@
 				</a>
 				<div class="menu-submenu">
 					<div class="menu-item">
-						<a href="" class="menu-link">
-							<span class="menu-text">NEW TICKET</span>
+						<a href="to:team@punusfi.com" class="menu-link">
+							<span class="menu-text">Email</span>
 						</a>
 					</div>
-					<div class="menu-item">
+					<!-- <div class="menu-item">
 						<a href="" class="menu-link">
 							<span class="menu-text">TICKET HISTORY</span>
 						</a>
-					</div>
+					</div> -->
 				</div>
-			</div> -->
+			</div>
 
 		</div>
 	</div>
