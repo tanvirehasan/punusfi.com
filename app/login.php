@@ -40,8 +40,8 @@
                     <div class="mb-3">
                         <div class="d-flex">
                             <label class="form-label">Password <span class="text-danger">*</span></label>
-                            <a href="#" class="ms-auto text-white text-decoration-none text-opacity-50">Forgot
-                                password?</a>
+                            <!-- <a href="#" class="ms-auto text-white text-decoration-none text-opacity-50">Forgot
+                                password?</a> -->
                         </div>
                         <input type="password" name="password" class="form-control form-control-lg bg-white bg-opacity-5" value="" placeholder="" />
                     </div>

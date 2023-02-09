@@ -24,6 +24,14 @@ if (isset($_POST['withdraw'])) {
         $mess = "Your PIN not Match";
     }
 }
+
+
+
+echo 
+
+
+
+
 ?>
 
 
