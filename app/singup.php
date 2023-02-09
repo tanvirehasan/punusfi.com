@@ -41,7 +41,7 @@ include "controller/user/sign_login.php";
 
                         <div class="mb-3">
                             <label class="form-label">Refer Username <span class="text-danger">*</span></label>
-                            <input type="text" name="refer_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g moon2d" required />
+                            <input type="text" name="refer_id" class="form-control form-control-lg bg-white bg-opacity-5" placeholder="e.g exshd2d" required />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Name <span class="text-danger">*</span></label>
