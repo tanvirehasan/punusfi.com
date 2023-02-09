@@ -20,7 +20,7 @@ include_once "controller/package/package_sql.php";
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Amount </label>
-                        <input type="number" class="form-control form-control-lg bg-white bg-opacity-5" name="amount">
+                        <input type="number" min="20" class="form-control form-control-lg bg-white bg-opacity-5" name="amount">
                     </div>
 
                     <div class="mb-3">

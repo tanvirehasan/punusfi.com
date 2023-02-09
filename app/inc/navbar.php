@@ -43,11 +43,27 @@
 				</a>
 			</div>
 
-			<div class="menu-item">
-				<a href="" class="menu-link">
-					<span class="menu-icon"><i class="fas fa-sack-dollar"></i></span>
+
+			<div class="menu-item has-sub">
+				<a href="#" class="menu-link">
+					<span class="menu-icon">
+						<i class="fas fa-sack-dollar"></i>
+					</span>
 					<span class="menu-text">WITHDRAW</span>
+					<span class="menu-caret"><b class="caret"></b></span>
 				</a>
+				<div class="menu-submenu">
+					<div class="menu-item">
+						<a href="withdrawal.php" class="menu-link">
+							<span class="menu-text">WITHDRAW</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="withdrawal_list.php" class="menu-link">
+							<span class="menu-text">Withdrawal HISTORY</span>
+						</a>
+					</div>
+				</div>
 			</div>
 
 
