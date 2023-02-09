@@ -304,7 +304,7 @@ function email_send($subject, $title, $text, $receiver)
     $mail->IsSMTP();
     $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'tls';
-    $mail->Host = "http://mail.punusfi.com:2079";
+    $mail->Host = "mail.punusfi.com";
     $mail->Port = 2079;
     $mail->IsHTML(true);
     $mail->CharSet = 'UTF-8';
