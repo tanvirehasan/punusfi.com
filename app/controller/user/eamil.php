@@ -9,8 +9,12 @@ email_send(
     
        Dear ". $name . ",<br><br>
 
-       <br><br> Username:". $user_name." <br>
-       <br><br> Password:" . $password . " <br><br>
+       <br><br> 
+       Username:". $user_name." <br>
+       Password:" . $password ." <br>
+       PIN:" . $pin . " <br>
+       
+       <br>
 
         We would like to extend our warmest congratulations on your successful registration with us! We are so glad to have you as a member of our community. <br><br>
 
