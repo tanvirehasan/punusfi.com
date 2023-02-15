@@ -25,6 +25,7 @@ $userid = UserData('id');
 	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 	<link rel="apple-touch-icon-precomposed" href="https://punusfi.com/logo.png">
+	<link rel="shortcut icon" href="https://punusfi.com/logo.png" type="image/x-icon">
 </head>
 
 
