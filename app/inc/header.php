@@ -24,7 +24,9 @@ $userid = UserData('id');
 	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+	<link rel="apple-touch-icon-precomposed" href="https://punusfi.com/logo.png">
 </head>
+
 
 <body>
 	<div id="app" class="app ">
@@ -55,9 +57,9 @@ $userid = UserData('id');
 			</div>
 
 
-			<div class="menu">				
-				
-				
+			<div class="menu">
+
+
 				<div class="menu-item dropdown dropdown-mobile-full">
 					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
 						<div class="menu-img online">
@@ -72,7 +74,7 @@ $userid = UserData('id');
 						<!-- <a class="dropdown-item d-flex align-items-center" href="email_inbox.html">INBOX <i class="bi bi-envelope ms-auto text-theme fs-16px my-n1"></i></a> -->
 						<!-- <a class="dropdown-item d-flex align-items-center" href="calendar.html">CALENDAR <i class="bi bi-calendar ms-auto text-theme fs-16px my-n1"></i></a> -->
 						<a class="dropdown-item d-flex align-items-center" href="settings.php">SETTINGS <i class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i></a>
-						
+
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item d-flex align-items-center" href="logout.php">LOGOUT <i class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i></a>
 					</div>
