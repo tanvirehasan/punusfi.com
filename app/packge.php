@@ -3,13 +3,9 @@ include_once "inc/header.php";
 include_once "inc/navbar.php";
 include_once "controller/package/package_sql.php";
 $pack = UserData('id');
-$btn = (UserData('packageid')!=0) ? "disabled" : "";
+$btn = (UserData('packageid') != 0) ? "disabled" : "";
 
 ?>
-
-
-
-
 
 
 <div id="content" class="app-content">
@@ -33,9 +29,10 @@ $btn = (UserData('packageid')!=0) ? "disabled" : "";
                         <div class="card-body">
                             <div class="page-price">
                                 <h1 class="card-title pricing-card-title">$<?= $row->package_price ?></h1>
-                                <small class="text-muted">/ 365 Dyes</small>
+                                <p class="text-white  fs-4 p-0 m-0">365 Dyes</p>
+                                <p class="text-white fs-4 p-0 m-0">Monthly <?= $row->package_roi ?>%</p>
                             </div>
-                            <ul class="list-unstyled mt-3 mb-4">
+                            <ul class="list-unstyled mt-3 mb-4 ">
                                 <?= $row->package_info ?>
                             </ul>
                             <input type="hidden" name="price" value="<?= $row->package_price ?>">
@@ -43,7 +40,7 @@ $btn = (UserData('packageid')!=0) ? "disabled" : "";
 
                             <?php
                             if (CashIn($userid) >= $row->package_price) {
-                                echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme' ".$btn." >Purchase</button>";
+                                echo "<button type='submit' name='buy_pack' class='btn btn-lg btn-block btn-outline-theme' " . $btn . " >Purchase</button>";
                             } else {
                                 echo "<a href='deposit.php' class='btn btn-lg btn-block btn-outline-theme'>Purchase</a>";
                             }
