@@ -10,10 +10,46 @@ if (isset($_POST['withdraw'])) {
     $amount = $_POST['amount'];
     $withdrow_type = $_POST['withdrow_type'];
     $wallet_bank = $_POST['wallet_bank'];
+
+    $Bank_Name = $_POST['Bank_Name'];
+    $Bank_City_Country = $_POST['Bank_City_Country'];
+    $Swift_Code = $_POST['Swift_Code'];
+    $account_holder_name = $_POST['account_holder_name'];
+    $Bank_Account_Number = $_POST['Bank_Account_Number'];
+
     $pin = $_POST['pin'];
 
     if ($pin == UserData('pin')) {
-        $insert  = "INSERT INTO withdraw (username,amount,withdrow_type,wallet_bank,pin,date_time) VALUES ('$username','$amount','$withdrow_type','$wallet_bank','$pin',NOW() )";
+        $insert  = "INSERT INTO withdraw (
+
+            username,
+            amount,
+            withdrow_type,
+            wallet_bank,
+            pin,
+            Bank_Name,
+            Bank_City_Country,
+            Swift_Code,
+            account_holder_name,
+            Bank_Account_Number,
+            date_time
+
+        ) VALUES (
+
+            '$username',
+            '$amount',
+            '$withdrow_type',
+            '$wallet_bank',
+            '$pin',
+            '$Bank_Name',
+            '$Bank_City_Country',
+            '$Swift_Code',
+            '$account_holder_name',
+            '$Bank_Account_Number',
+            NOW() 
+        )";
+        
+       
         if (mysqli_query($conn, $insert) == TRUE) {
             Reconect('withdrawal_list.php');
         } else {
@@ -28,7 +64,11 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
 
 ?>
 
-
+<style>
+    .bank_info {
+        display: none;
+    }
+</style>
 
 
 
@@ -37,13 +77,13 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
     <div class="row">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Withdrawal</h1>
-            <p class="text-warning" >Attention all users: Please note that the withdraw function is only available on Saturdays. We apologize for any inconvenience this may cause and appreciate your understanding. Thank you for your continued support.</p>
+            <p class="text-warning h3">Attention all users: Please note that the withdraw function is only available on Saturdays. We apologize for any inconvenience this may cause and appreciate your understanding. Thank you for your continued support.</p>
             <?php if (isset($mess)) {
                 echo " <h4 class='text-danger'>" . $mess . "</h4> ";
             } ?>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-12">
             <div class="card p-5">
                 <form action="" method="post">
                     <div class="mb-3">
@@ -56,21 +96,52 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
                         <input type="number" min="10" class="form-control form-control-lg bg-white bg-opacity-5" name="amount">
                     </div>
 
-                    <label class="form-label"> Your Wallet/Bank Details </label>
-                    <div class="mb-3 input-group">
-                        <select name="withdrow_type" id="" class="form-control form-control-lg bg-white bg-opacity-5">
+                    <div class="mb-3">
+                        <label class="form-label"> Payment Method </label>
+                        <select name="withdrow_type" id="" class="form-control form-control-lg bg-white bg-opacity-5" onchange="wallet_info(this.value)">
                             <option value="" class="text-dark">Select</option>
-                            <option value="bank" class="text-dark">Bank</option>
-                            <option value="usdt" class="text-dark">USDT</option>
+                            <option value="bank" class="text-dark" id="bank_open">Bank</option>
+                            <option value="usdt" class="text-dark" id="wallet_open">USDT</option>
                         </select>
-                        <input type="text" name="wallet_bank" class="form-control form-control-lg bg-white bg-opacity-5 w-75">
+                    </div>
+
+                    <div class="mb-3 wallet" style="display: none;">
+                        <label class="form-label"> Your Wallet/Bank Details </label>
+                        <input type="text" name="wallet_bank" class="form-control form-control-lg bg-white bg-opacity-5">
+                    </div>
+
+                    <div class="bank_info">
+                        <div class="mb-3">
+                            <label class="form-label">Bank Name </label>
+                            <input type="text" name="Bank_Name" class="form-control form-control-lg bg-white bg-opacity-5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Bank City & Country</label>
+                            <input type="text" name="Bank_City_Country" class="form-control form-control-lg bg-white bg-opacity-5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Swift Code</label>
+                            <input type="text" name="Swift_Code" class="form-control form-control-lg bg-white bg-opacity-5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Account Holder Name</label>
+                            <input type="text" name="account_holder_name" class="form-control form-control-lg bg-white bg-opacity-5">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Bank Account Number</label>
+                            <input type="text" name="Bank_Account_Number" class="form-control form-control-lg bg-white bg-opacity-5">
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label"> Your PIN </label>
                         <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="pin">
                     </div>
-                    <input type="submit" <?= $disabled ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
+                    <input type="submit" <?php //$disabled ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>
                 <div class="card-arrow">
                     <div class="card-arrow-top-left"></div>
@@ -82,5 +153,26 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
         </div>
 
     </div>
+
+
+    <script>
+        function wallet_info(val) {
+            if (val == "bank") {
+                $(".bank_info").show();
+                $(".wallet").hide();
+            }
+
+            if (val == "") {
+                $(".bank_info").hide();
+                $(".wallet").hide();
+            }
+
+            if (val == "usdt") {
+                $(".wallet").show();
+                $(".bank_info").hide();
+            }
+
+        }
+    </script>
 
     <?php include "inc/footer.php"; ?>
