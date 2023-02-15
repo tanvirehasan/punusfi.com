@@ -5,7 +5,7 @@ include_once "inc/navbar.php";
 
 if(isset($_POST['profile_update'])){
     $name=$_POST['name'];
-    $name = $_POST['email_id'];    
+    $email_id = $_POST['email_id'];    
     $phone_no = $_POST['phone_no'];
     $country = $_POST['country'];
 
@@ -54,7 +54,7 @@ if(isset($_POST['profile_update'])){
                         <td>
                             <p class="p-0 m-0 fs-3">Name:</p>
                         </td>
-                        <td><input type="text" name="name" class="form-control  fs-3 p-0 px-2 m-0" value="<?= UserData('name') ?>"></td>
+                        <td><input type="text" name="name" class="form-control  fs-3 p-0 px-2 m-0" value="<?= UserData('name');?>"></td>
                     </tr>
                     <tr>
                         <td>
