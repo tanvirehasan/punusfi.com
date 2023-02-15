@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    if (isset($_SESSION['user'])) {
-        header('Location:index.php');
-        }
-    include "config/conn.php";
-    include "controller/user/sign_login.php";
+session_start();
+if (isset($_SESSION['user'])) {
+    header('Location:index.php');
+}
+include "config/conn.php";
+include "controller/user/sign_login.php";
 ?>
 
 <!DOCTYPE html>
@@ -26,15 +26,15 @@
         <div class="login">
             <div class="login-content">
                 <form action="" method="POST" name="login_form">
-                    <h1 class="text-center">Sign In</h1>
+                    <h1 class="text-center py-3">Sign In</h1>
                     <div class="text-white text-opacity-50 text-center mb-4">
-                        For your protection, please verify your identity.
-
-                        <?php if(isset($mess)){echo $mess;} ?>
-
+                        <?php if (isset($mess)) {
+                            echo "<p class='text-danger fs-3' >"
+                            . $mess."</p>";
+                        } ?>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <label class="form-label">Email / User Name <span class="text-danger">*</span></label>
                         <input type="text" name="userid_email" class="form-control form-control-lg bg-white bg-opacity-5" value="" placeholder="" />
                     </div>
                     <div class="mb-3">

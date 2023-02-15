@@ -29,7 +29,7 @@ $btn = (UserData('packageid') != 0) ? "disabled" : "";
                         <div class="card-body">
                             <div class="page-price">
                                 <h1 class="card-title pricing-card-title">$<?= $row->package_price ?></h1>
-                                <p class="text-white  fs-4 p-0 m-0">365 Dyes</p>
+                                <p class="text-white  fs-4 p-0 m-0">365 Days</p>
                                 <p class="text-white fs-4 p-0 m-0">Monthly <?= $row->package_roi ?>%</p>
                             </div>
                             <ul class="list-unstyled mt-3 mb-4 ">
