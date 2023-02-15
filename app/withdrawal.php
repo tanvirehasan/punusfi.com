@@ -48,8 +48,8 @@ if (isset($_POST['withdraw'])) {
             '$Bank_Account_Number',
             NOW() 
         )";
-        
-       
+
+
         if (mysqli_query($conn, $insert) == TRUE) {
             Reconect('withdrawal_list.php');
         } else {
@@ -93,14 +93,19 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Amount </label>
-                        <input type="number" min="10" class="form-control form-control-lg bg-white bg-opacity-5" name="amount">
+                        <input type="number" min="10" class="form-control form-control-lg bg-white bg-opacity-5" name="amount" id="amount">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"> Net Amount (With -5% withdrawal Cost) </label>
+                        <input type="number" readonly class="form-control form-control-lg bg-white bg-opacity-5" name="netamount" id="netamount">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label"> Payment Method </label>
                         <select name="withdrow_type" id="" class="form-control form-control-lg bg-white bg-opacity-5" onchange="wallet_info(this.value)">
                             <option value="" class="text-dark">Select</option>
-                            <option value="bank" class="text-dark" id="bank_open">Bank</option>
+                            <option value="bank" class="text-dark" id="bank_open">BANK</option>
                             <option value="usdt" class="text-dark" id="wallet_open">USDT</option>
                         </select>
                     </div>
@@ -141,7 +146,8 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
                         <label class="form-label"> Your PIN </label>
                         <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="pin">
                     </div>
-                    <input type="submit" <?php //$disabled ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
+                    <input type="submit" <?php //$disabled 
+                                            ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>
                 <div class="card-arrow">
                     <div class="card-arrow-top-left"></div>
@@ -154,7 +160,8 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
 
     </div>
 
-
+    <?php include "inc/footer.php"; ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
         function wallet_info(val) {
             if (val == "bank") {
@@ -173,6 +180,12 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
             }
 
         }
-    </script>
 
-    <?php include "inc/footer.php"; ?>
+        $(document).ready(function() {
+            $("#amount").keyup(function() {
+                var amunt = $("#amount").val();
+                var amunt = amunt - amunt / 100 * 5;
+                $("#netamount").val(amunt);
+            });
+        });
+    </script>
