@@ -18,7 +18,7 @@ $C = Team_Tree('C', $leader);
     <div class="col-12 text-center py-5">
       <img class='p-1' src='assets/img/businessman.png' width='20%'>
       <p class="h3"><a class="nav-link" href="team.php?tree=<?= $leader ?>"><?= $leader ?></a></p>
-      <button onclick="abcsell('side_sell_abc.php?user=<?= $leader ?>')">info</button>
+      <button class="btn btn-outline-theme btn-lg" onclick="abcsell('side_sell_abc.php?user=<?= $leader ?>')">info</button>
     </div>
     <!-- Team A  -->
     <div class="col-4  ">

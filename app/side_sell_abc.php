@@ -136,9 +136,9 @@ $totalsellC;
 <div class="modal-body bg-dark p-0 m-0">
     <table class="table">
         <tr>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
+            <th>Team A</th>
+            <th>Team B</th>
+            <th>Team C</th>
         </tr>
 
         <tr>

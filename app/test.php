@@ -4,6 +4,6 @@ $data = $conn->query("SELECT * FROM team_tree");
 
 while ($row = $data->fetch_object()) {
 
-    $conn->query("UPDATE users SET `placemnet_id`='$row->plecement_id', `placement`='C' WHERE user_name='$row->C' ");
+    $conn->query("UPDATE users SET `placemnet_id`='$row->plecement_id', `placement`='A' WHERE user_name='$row->A' ");
 
 }
