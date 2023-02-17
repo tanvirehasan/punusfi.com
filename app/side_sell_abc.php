@@ -195,10 +195,15 @@ if ($dataB->num_rows > 0) {
                                                             while ($row16 = $data16->fetch_object()) {
                                                                 $price16 = Packageinfo($row16->packageid);
                                                                 $totalsellB += $price16;
+
+                                                                $data17 = $conn->query("SELECT * FROM users where placemnet_id='$row16->user_name' and stutas='1'");
+                                                                while ($row17 = $data17->fetch_object()) {
+                                                                    $price17 = Packageinfo($row17->packageid);
+                                                                    $totalsellB += $price17;
+                                                                }
+
+
                                                             }
-
-
-
                                                         }
                                                     }
                                                 }
