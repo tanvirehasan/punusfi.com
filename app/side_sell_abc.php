@@ -124,6 +124,97 @@ if ($data->num_rows > 0) {
                                                                         while ($row21 = $data21->fetch_object()) {
                                                                             $price21 = Packageinfo($row21->packageid);
                                                                             $totalsellA += $price21;
+
+                                                                            $data22 = $conn->query("SELECT * FROM users where placemnet_id='$row21->user_name' and stutas='1'");
+                                                                            while ($row22 = $data22->fetch_object()) {
+                                                                                $price22 = Packageinfo($row22->packageid);
+                                                                                $totalsellA += $price22;
+
+                                                                                $data23 = $conn->query("SELECT * FROM users where placemnet_id='$row22>user_name' and stutas='1'");
+                                                                                while ($row23 = $data23->fetch_object()) {
+                                                                                    $price23 = Packageinfo($row23->packageid);
+                                                                                    $totalsellA += $price23;
+
+                                                                                    $data24 = $conn->query("SELECT * FROM users where placemnet_id='$row23>user_name' and stutas='1'");
+                                                                                    while ($row24 = $data24->fetch_object()) {
+                                                                                        $price24 = Packageinfo($row24->packageid);
+                                                                                        $totalsellA += $price24;
+
+                                                                                        $data25 = $conn->query("SELECT * FROM users where placemnet_id='$row24>user_name' and stutas='1'");
+                                                                                        while ($row25 = $data25->fetch_object()) {
+                                                                                            $price25 = Packageinfo($row25->packageid);
+                                                                                            $totalsellA += $price25;
+
+
+                                                                                            $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row25>user_name' and stutas='1'");
+                                                                                            while ($row26 = $data26->fetch_object()) {
+                                                                                                $price26 = Packageinfo($row26->packageid);
+                                                                                                $totalsellA += $price26;
+
+                                                                                                $data27 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
+                                                                                                while ($row27 = $data27->fetch_object()) {
+                                                                                                    $price27 = Packageinfo($row27->packageid);
+                                                                                                    $totalsellA += $price27;
+
+                                                                                                    $data28 = $conn->query("SELECT * FROM users where placemnet_id='$row27>user_name' and stutas='1'");
+                                                                                                    while ($row28 = $data28->fetch_object()) {
+                                                                                                        $price28 = Packageinfo($row28->packageid);
+                                                                                                        $totalsellA += $price28;
+
+                                                                                                        $data29 = $conn->query("SELECT * FROM users where placemnet_id='$row28>user_name' and stutas='1'");
+                                                                                                        while ($row29 = $data29->fetch_object()) {
+                                                                                                            $price29 = Packageinfo($row29->packageid);
+                                                                                                            $totalsellA += $price29;
+
+                                                                                                            $data30 = $conn->query("SELECT * FROM users where placemnet_id='$row29>user_name' and stutas='1'");
+                                                                                                            while ($row30 = $data30->fetch_object()) {
+                                                                                                                $price30 = Packageinfo($row30->packageid);
+                                                                                                                $totalsellA += $price30;
+
+                                                                                                                $data31 = $conn->query("SELECT * FROM users where placemnet_id='$row30>user_name' and stutas='1'");
+                                                                                                                while ($row31 = $data31->fetch_object()) {
+                                                                                                                    $price31 = Packageinfo($row31->packageid);
+                                                                                                                    $totalsellA += $price31;
+
+                                                                                                                    $data32 = $conn->query("SELECT * FROM users where placemnet_id='$row31>user_name' and stutas='1'");
+                                                                                                                    while ($row32 = $data32->fetch_object()) {
+                                                                                                                        $price32 = Packageinfo($row32->packageid);
+                                                                                                                        $totalsellA += $price32;
+
+                                                                                                                        $data33 = $conn->query("SELECT * FROM users where placemnet_id='$row32>user_name' and stutas='1'");
+                                                                                                                        while ($row33 = $data33->fetch_object()) {
+                                                                                                                            $price33 = Packageinfo($row33->packageid);
+                                                                                                                            $totalsellA += $price33;
+
+                                                                                                                            $data34 = $conn->query("SELECT * FROM users where placemnet_id='$row33>user_name' and stutas='1'");
+                                                                                                                            while ($row34 = $data34->fetch_object()) {
+                                                                                                                                $price34 = Packageinfo($row34->packageid);
+                                                                                                                                $totalsellA += $price34;
+
+                                                                                                                                $data35 = $conn->query("SELECT * FROM users where placemnet_id='$row34>user_name' and stutas='1'");
+                                                                                                                                while ($row35 = $data35->fetch_object()) {
+                                                                                                                                    $price35 = Packageinfo($row35->packageid);
+                                                                                                                                    $totalsellA += $price35;
+
+                                                                                                                                    $data36 = $conn->query("SELECT * FROM users where placemnet_id='$row35>user_name' and stutas='1'");
+                                                                                                                                    while ($row36 = $data36->fetch_object()) {
+                                                                                                                                        $price36 = Packageinfo($row36->packageid);
+                                                                                                                                        $totalsellA += $price36;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
                                                                         }
                                                                     }
                                                                 }
@@ -142,7 +233,6 @@ if ($data->num_rows > 0) {
             }
         }
     }
-
 
 
 } //Num Rows
@@ -285,51 +375,55 @@ if ($dataB->num_rows > 0) {
                                                                                                 $price26 = Packageinfo($row26->packageid);
                                                                                                 $totalsellB += $price26;
 
-                                                                                                $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                while ($row26 = $data26->fetch_object()) {
-                                                                                                    $price26 = Packageinfo($row26->packageid);
-                                                                                                    $totalsellB += $price26;
-                                                                                                    $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                    while ($row26 = $data26->fetch_object()) {
-                                                                                                        $price26 = Packageinfo($row26->packageid);
-                                                                                                        $totalsellB += $price26;
+                                                                                                $data27 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
+                                                                                                while ($row27 = $data27->fetch_object()) {
+                                                                                                    $price27 = Packageinfo($row27->packageid);
+                                                                                                    $totalsellB += $price27;
 
-                                                                                                        $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                        while ($row26 = $data26->fetch_object()) {
-                                                                                                            $price26 = Packageinfo($row26->packageid);
-                                                                                                            $totalsellB += $price26;
+                                                                                                    $data28 = $conn->query("SELECT * FROM users where placemnet_id='$row27>user_name' and stutas='1'");
+                                                                                                    while ($row28 = $data28->fetch_object()) {
+                                                                                                        $price28 = Packageinfo($row28->packageid);
+                                                                                                        $totalsellB += $price28;
 
-                                                                                                            $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                            while ($row26 = $data26->fetch_object()) {
-                                                                                                                $price26 = Packageinfo($row26->packageid);
-                                                                                                                $totalsellB += $price26;
+                                                                                                        $data29 = $conn->query("SELECT * FROM users where placemnet_id='$row28>user_name' and stutas='1'");
+                                                                                                        while ($row29 = $data29->fetch_object()) {
+                                                                                                            $price29 = Packageinfo($row29->packageid);
+                                                                                                            $totalsellB += $price29;
 
-                                                                                                                $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                while ($row26 = $data26->fetch_object()) {
-                                                                                                                    $price26 = Packageinfo($row26->packageid);
-                                                                                                                    $totalsellB += $price26;
+                                                                                                            $data30 = $conn->query("SELECT * FROM users where placemnet_id='$row29>user_name' and stutas='1'");
+                                                                                                            while ($row30 = $data30->fetch_object()) {
+                                                                                                                $price30 = Packageinfo($row30->packageid);
+                                                                                                                $totalsellB += $price30;
 
-                                                                                                                    $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                    while ($row26 = $data26->fetch_object()) {
-                                                                                                                        $price26 = Packageinfo($row26->packageid);
-                                                                                                                        $totalsellB += $price26;
-                                                                                                                        $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                        while ($row26 = $data26->fetch_object()) {
-                                                                                                                            $price26 = Packageinfo($row26->packageid);
-                                                                                                                            $totalsellB += $price26;
-                                                                                                                            $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                            while ($row26 = $data26->fetch_object()
-                                                                                                                            ) {
-                                                                                                                                $price26 = Packageinfo($row26->packageid);
-                                                                                                                                $totalsellB += $price26;
-                                                                                                                                $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                                while ($row26 = $data26->fetch_object()) {
-                                                                                                                                    $price26 = Packageinfo($row26->packageid);
-                                                                                                                                    $totalsellB += $price26;
-                                                                                                                                    $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
-                                                                                                                                    while ($row26 = $data26->fetch_object()) {
-                                                                                                                                        $price26 = Packageinfo($row26->packageid);
-                                                                                                                                        $totalsellB += $price26;
+                                                                                                                $data31 = $conn->query("SELECT * FROM users where placemnet_id='$row30>user_name' and stutas='1'");
+                                                                                                                while ($row31 = $data31->fetch_object()) {
+                                                                                                                    $price31 = Packageinfo($row31->packageid);
+                                                                                                                    $totalsellB += $price31;
+
+                                                                                                                    $data32 = $conn->query("SELECT * FROM users where placemnet_id='$row31>user_name' and stutas='1'");
+                                                                                                                    while ($row32 = $data32->fetch_object()) {
+                                                                                                                        $price32 = Packageinfo($row32->packageid);
+                                                                                                                        $totalsellB += $price32;
+
+                                                                                                                        $data33 = $conn->query("SELECT * FROM users where placemnet_id='$row32>user_name' and stutas='1'");
+                                                                                                                        while ($row33 = $data33->fetch_object()) {
+                                                                                                                            $price33 = Packageinfo($row33->packageid);
+                                                                                                                            $totalsellB += $price33;
+
+                                                                                                                            $data34 = $conn->query("SELECT * FROM users where placemnet_id='$row33>user_name' and stutas='1'");
+                                                                                                                            while ($row34 = $data34->fetch_object()) {
+                                                                                                                                $price34 = Packageinfo($row34->packageid);
+                                                                                                                                $totalsellB += $price34;
+
+                                                                                                                                $data35 = $conn->query("SELECT * FROM users where placemnet_id='$row34>user_name' and stutas='1'");
+                                                                                                                                while ($row35 = $data35->fetch_object()) {
+                                                                                                                                    $price35 = Packageinfo($row35->packageid);
+                                                                                                                                    $totalsellB += $price35;
+
+                                                                                                                                    $data36 = $conn->query("SELECT * FROM users where placemnet_id='$row35>user_name' and stutas='1'");
+                                                                                                                                    while ($row36 = $data36->fetch_object()) {
+                                                                                                                                        $price36 = Packageinfo($row36->packageid);
+                                                                                                                                        $totalsellB += $price36;
                                                                                                                                     }
                                                                                                                                 }
                                                                                                                             }
@@ -484,6 +578,97 @@ $row = $dataB->fetch_object();
                                                                         while ($row21 = $data21->fetch_object()) {
                                                                             $price21 = Packageinfo($row21->packageid);
                                                                             $totalsellC += $price21;
+
+                                                                            $data22 = $conn->query("SELECT * FROM users where placemnet_id='$row21->user_name' and stutas='1'");
+                                                                            while ($row22 = $data22->fetch_object()) {
+                                                                                $price22 = Packageinfo($row22->packageid);
+                                                                                $totalsellC += $price22;
+
+                                                                                $data23 = $conn->query("SELECT * FROM users where placemnet_id='$row22>user_name' and stutas='1'");
+                                                                                while ($row23 = $data23->fetch_object()) {
+                                                                                    $price23 = Packageinfo($row23->packageid);
+                                                                                    $totalsellC += $price23;
+
+                                                                                    $data24 = $conn->query("SELECT * FROM users where placemnet_id='$row23>user_name' and stutas='1'");
+                                                                                    while ($row24 = $data24->fetch_object()) {
+                                                                                        $price24 = Packageinfo($row24->packageid);
+                                                                                        $totalsellC += $price24;
+
+                                                                                        $data25 = $conn->query("SELECT * FROM users where placemnet_id='$row24>user_name' and stutas='1'");
+                                                                                        while ($row25 = $data25->fetch_object()) {
+                                                                                            $price25 = Packageinfo($row25->packageid);
+                                                                                            $totalsellC += $price25;
+
+
+                                                                                            $data26 = $conn->query("SELECT * FROM users where placemnet_id='$row25>user_name' and stutas='1'");
+                                                                                            while ($row26 = $data26->fetch_object()) {
+                                                                                                $price26 = Packageinfo($row26->packageid);
+                                                                                                $totalsellC += $price26;
+
+                                                                                                $data27 = $conn->query("SELECT * FROM users where placemnet_id='$row26>user_name' and stutas='1'");
+                                                                                                while ($row27 = $data27->fetch_object()) {
+                                                                                                    $price27 = Packageinfo($row27->packageid);
+                                                                                                    $totalsellC += $price27;
+
+                                                                                                    $data28 = $conn->query("SELECT * FROM users where placemnet_id='$row27>user_name' and stutas='1'");
+                                                                                                    while ($row28 = $data28->fetch_object()) {
+                                                                                                        $price28 = Packageinfo($row28->packageid);
+                                                                                                        $totalsellC += $price28;
+
+                                                                                                        $data29 = $conn->query("SELECT * FROM users where placemnet_id='$row28>user_name' and stutas='1'");
+                                                                                                        while ($row29 = $data29->fetch_object()) {
+                                                                                                            $price29 = Packageinfo($row29->packageid);
+                                                                                                            $totalsellC += $price29;
+
+                                                                                                            $data30 = $conn->query("SELECT * FROM users where placemnet_id='$row29>user_name' and stutas='1'");
+                                                                                                            while ($row30 = $data30->fetch_object()) {
+                                                                                                                $price30 = Packageinfo($row30->packageid);
+                                                                                                                $totalsellC += $price30;
+
+                                                                                                                $data31 = $conn->query("SELECT * FROM users where placemnet_id='$row30>user_name' and stutas='1'");
+                                                                                                                while ($row31 = $data31->fetch_object()) {
+                                                                                                                    $price31 = Packageinfo($row31->packageid);
+                                                                                                                    $totalsellC += $price31;
+
+                                                                                                                    $data32 = $conn->query("SELECT * FROM users where placemnet_id='$row31>user_name' and stutas='1'");
+                                                                                                                    while ($row32 = $data32->fetch_object()) {
+                                                                                                                        $price32 = Packageinfo($row32->packageid);
+                                                                                                                        $totalsellC += $price32;
+
+                                                                                                                        $data33 = $conn->query("SELECT * FROM users where placemnet_id='$row32>user_name' and stutas='1'");
+                                                                                                                        while ($row33 = $data33->fetch_object()) {
+                                                                                                                            $price33 = Packageinfo($row33->packageid);
+                                                                                                                            $totalsellC += $price33;
+
+                                                                                                                            $data34 = $conn->query("SELECT * FROM users where placemnet_id='$row33>user_name' and stutas='1'");
+                                                                                                                            while ($row34 = $data34->fetch_object()) {
+                                                                                                                                $price34 = Packageinfo($row34->packageid);
+                                                                                                                                $totalsellC += $price34;
+
+                                                                                                                                $data35 = $conn->query("SELECT * FROM users where placemnet_id='$row34>user_name' and stutas='1'");
+                                                                                                                                while ($row35 = $data35->fetch_object()) {
+                                                                                                                                    $price35 = Packageinfo($row35->packageid);
+                                                                                                                                    $totalsellC += $price35;
+
+                                                                                                                                    $data36 = $conn->query("SELECT * FROM users where placemnet_id='$row35>user_name' and stutas='1'");
+                                                                                                                                    while ($row36 = $data36->fetch_object()) {
+                                                                                                                                        $price36 = Packageinfo($row36->packageid);
+                                                                                                                                        $totalsellC += $price36;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
                                                                         }
                                                                     }
                                                                 }
@@ -502,8 +687,6 @@ $row = $dataB->fetch_object();
             }
         }
     }
-
-
 
 } //Num row
 
