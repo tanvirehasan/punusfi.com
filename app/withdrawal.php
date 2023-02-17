@@ -146,7 +146,7 @@ $disabled = (date('l') != 'Saturday') ? 'disabled' : '';
                         <label class="form-label"> Your PIN </label>
                         <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="pin">
                     </div>
-                    <input type="submit" <?php //$disabled 
+                    <input type="submit" <?php echo $disabled 
                                             ?> value="Submit" name="withdraw" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>
                 <div class="card-arrow">
