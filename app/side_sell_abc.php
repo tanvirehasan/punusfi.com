@@ -202,6 +202,34 @@ if ($dataB->num_rows > 0) {
                                                                     $totalsellB += $price17;
                                                                 }
 
+                                                                $data18 = $conn->query("SELECT * FROM users where placemnet_id='$row17->user_name' and stutas='1'");
+                                                                while ($row18 = $data18->fetch_object()) {
+                                                                    $price18 = Packageinfo($row18->packageid);
+                                                                    $totalsellB += $price18;
+
+                                                                    $data19 = $conn->query("SELECT * FROM users where placemnet_id='$row18->user_name' and stutas='1'");
+                                                                    while ($row19 = $data19->fetch_object()) {
+                                                                        $price19 = Packageinfo($row19->packageid);
+                                                                        $totalsellB += $price19;
+                                                                    }
+
+                                                                    $data20 = $conn->query("SELECT * FROM users where placemnet_id='$row19->user_name' and stutas='1'");
+                                                                    while ($row20 = $data20->fetch_object()) {
+                                                                        $price20 = Packageinfo($row20->packageid);
+                                                                        $totalsellB += $price20;
+
+                                                                        $data21 = $conn->query("SELECT * FROM users where placemnet_id='$row20->user_name' and stutas='1'");
+                                                                        while ($row21 = $data21->fetch_object()) {
+                                                                            $price21 = Packageinfo($row21->packageid);
+                                                                            $totalsellB += $price21;
+                                                                        }
+
+
+                                                                    }
+
+
+                                                                }
+
 
                                                             }
                                                         }
