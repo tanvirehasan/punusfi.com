@@ -6,14 +6,14 @@ if (isset($_POST['signup_btn'])) {
     
     $refer_id     = $_POST['refer_id'];
     $name         = $_POST['name'];
-    $user_name    = $_POST['user_name'];
+    $user_name    = strtolower($_POST['user_name']);
     $email_id     = $_POST['email_id'];
     $phone_no     = $_POST['phone_no'];
     $password     = $_POST['password'];
     $pin          = $_POST['pin'];
     $country      = $_POST['country'];
     $gender       = $_POST['gender'];
-    $placemnet_id = $_POST['placemnet_id'];
+    $placemnet_id = strtolower($_POST['placemnet_id']);
     $placement    = $_POST['placement'];
 
     if (rowcount('users', "where user_name ='$refer_id'") > 0) { 
