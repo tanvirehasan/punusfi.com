@@ -371,17 +371,27 @@ include "inc/navbar.php";
                 </div>
 
             </div>
-
         </div>
 
-
-
-
-
-
-
     </div>
-
 </div>
+
+<?php
+
+$puser_name = UserData('user_name');
+include "rank.php";
+
+if ($totalsellA >= 1000 && $totalsellB >= 1000 && $totalsellC >= 1000) {
+    if (rowcount('rank_and_bunus', " WHERE userid='$puser_name'")==0) {
+        $conn->query("INSERT INTO rank_and_bunus (userid, rank_lavel,rank_degicnation, rank_bunus, rank_date) VALUES ('$puser_name','R1','Sales Executive (SE)', '100', NOW() )");
+    }
+}
+
+?>
+
+
+
+
+
 
 <?php include "inc/footer.php"; ?>

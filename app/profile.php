@@ -17,6 +17,8 @@ if (isset($_POST['profile_update'])) {
     }
 }
 
+
+
 ?>
 
 
@@ -25,8 +27,10 @@ if (isset($_POST['profile_update'])) {
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto ">
             <h1 class="display-4">Profile!</h1>
             <?php if (isset($mess)) {
-                echo  $mess;
-            } ?>
+                echo  $mess;             
+            }
+                echo RankData('rank_degicnation');         
+            ?>
         </div>
         <div class="col-md-3">
             <img src="assets/img/user/profile.jpg" alt="" width="100%">

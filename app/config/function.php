@@ -40,8 +40,6 @@ function siteUserData($Usr_data,$username)
 }
 
 
-
-
 //UserData
 function referidData($data){
     $referid = UserData('refer_id');
@@ -49,9 +47,17 @@ function referidData($data){
     return $row[$data];
 }
 
+
 //reconect
 function Reconect($url){
 	echo "<script> location.replace('".$url."')</script>";
+}
+
+
+//RankData
+function RankData($data){
+    $row = mysqli_fetch_array(SelectData('rank_and_bunus', "WHERE userid='{$_SESSION['user']}' "));
+    return $row[$data];
 }
 
 
@@ -221,6 +227,16 @@ function withdrawal(){
     $select = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($select);
     return $row['totalamount'];
+}
+
+
+function Rankwallet(){
+    global $conn;
+    $username = UserData('user_name');
+    $sql = "SELECT SUM(rank_bunus) as rankbunus FROM rank_and_bunus where userid='$username'";
+    $select = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($select);
+    return $row['rankbunus'];
 }
 
 

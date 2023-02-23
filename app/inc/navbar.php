@@ -17,8 +17,9 @@
 			<div class="col-8">
 				<p class="p-0 m-0"><i class="p-0 m-0">@<?= UserData('user_name'); ?></i></p>
 				<b><?= UserData('name'); ?></b>
-				<P>$ <?= Current_balance() ?></P>
+				<P>$ <?= Current_balance() ?></P>				
 			</div>
+			<?=RankData('rank_degicnation')?>
 		</div>
 
 		<div class="menu pt-md-5">
