@@ -19,7 +19,7 @@
 				<b><?= UserData('name'); ?></b>
 				<P>$ <?= Current_balance() ?></P>
 			</div>
-			<p class="text-warning fs-3"><?= RankData('rank_degicnation') ?></p>
+			<p class="text-warning fs-4"><?= RankData('rank_degicnation') ?></p>
 		</div>
 
 		<div class="menu pt-md-5">
