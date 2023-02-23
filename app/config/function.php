@@ -217,7 +217,7 @@ return (UserData('stutas')==1)? $genicom:0;
 function withdrawal(){
     global $conn;
     $username = UserData('user_name');
-    $sql = "SELECT SUM(amount) as totalamount FROM withdraw where username='$username' and stutas=0 or stutas=1 ";
+    $sql = "SELECT SUM(amount) as totalamount FROM withdraw where username='$username' and stutas != 3 ";
     $select = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($select);
     return $row['totalamount'];

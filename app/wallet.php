@@ -127,6 +127,10 @@ include "inc/navbar.php";
                                 <?php
                                     $totalicome = $gen + ROI()[0] + refericom();
                                     echo $netblance = $totalicome - withdrawal();
+
+                                    
+
+
                                 ?>
                             </h3>
                         </div>
