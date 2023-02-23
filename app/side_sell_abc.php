@@ -25,6 +25,9 @@ $userid = $_GET['user'];
 $data = $conn->query("SELECT * FROM users where placemnet_id='$userid' and placement='A' and stutas='1' ");
 if ($data->num_rows > 0) {
     $row = $data->fetch_object();
+    $price = Packageinfo($row->packageid);
+    $totalsellA += $price;
+    
 
 
     $dataA = $conn->query("SELECT * FROM users where placemnet_id='$row->user_name' ");
@@ -221,6 +224,8 @@ if ($data->num_rows > 0) {
                 $data = $conn->query("SELECT * FROM users where placemnet_id='$userid' and placement='B' and stutas='1' ");
                 if ($data->num_rows > 0) {
                     $row = $data->fetch_object();
+                    $price = Packageinfo($row->packageid);
+                    $totalsellB += $price;
 
 
                     $dataA = $conn->query("SELECT * FROM users where placemnet_id='$row->user_name' ");
@@ -420,6 +425,8 @@ if ($data->num_rows > 0) {
                 $data = $conn->query("SELECT * FROM users where placemnet_id='$userid' and placement='C' and stutas='1' ");
                 if ($data->num_rows > 0) {
                     $row = $data->fetch_object();
+                    $price = Packageinfo($row->packageid);
+                    $totalsellC += $price;
 
 
                     $dataA = $conn->query("SELECT * FROM users where placemnet_id='$row->user_name' ");
