@@ -28,6 +28,7 @@ include 'inc/header.php';
                 <td>Pay Method</td>
                 <td>wallet/bank</td>
                 <td>USD</td>
+                <td>Payamunt</td>
                 <td>Stetus</td>
               </tr>
             </thead>
@@ -40,10 +41,19 @@ include 'inc/header.php';
                   <td><?php echo $i; ?></td>
                   <td><?php echo $UserData['username']; ?></td>
                   <td><?php echo $UserData['withdrow_type']; ?></td>
-                  <td><?php echo $UserData['wallet_bank']; ?></td>
-                  <td><?php echo $UserData['amount']; ?></td>
-                  <?php
+                  <td>
+                    <?php
+                    if ($UserData['withdrow_type'] == 'bank') {
+                      echo  $UserData['Bank_Name'] . ", " . $UserData['account_holder_name'] . ", " . $UserData['Bank_Account_Number'] . ", " .
+                        $UserData['Swift_Code'] . ", " . $UserData['Bank_City_Country'];
+                    } else {
+                      echo $UserData['wallet_bank'];
+                    } ?>
+                  </td>
+                  <td><?php echo $netamunt= $UserData['amount']; ?></td>
+                  <td><?php echo $pay_amunt = $netamunt - $netamunt / 100 * 5; ?></td>
 
+                  <?php
                   if ($UserData['stutas'] == 0) { ?>
                     <td class="text-danger text-center h5"><strong><i class="fas fa-clock"></i></strong></td>
                   <?php } else { ?>
@@ -93,24 +103,19 @@ include 'inc/header.php';
                     <td><?php echo $i; ?></td>
                     <td><?php echo $UserData['username']; ?></td>
                     <td><?php echo $UserData['withdrow_type']; ?></td>
-                    <td><?php 
-
+                    <td>
+                      <?php
                       if ($UserData['withdrow_type'] == 'bank') {
-                        echo  $UserData['Bank_Name'].", ".$UserData['account_holder_name'] . ", " . $UserData['Bank_Account_Number'] . ", " .
-                          $UserData['Swift_Code'] . ", " . $UserData['Bank_City_Country'];        
-                      }else{
+                        echo  $UserData['Bank_Name'] . ", " . $UserData['account_holder_name'] . ", " . $UserData['Bank_Account_Number'] . ", " .
+                          $UserData['Swift_Code'] . ", " . $UserData['Bank_City_Country'];
+                      } else {
                         echo $UserData['wallet_bank'];
-                      }
-                    
-                    ?></td>
+                      } ?>
+                    </td>
                     <td><?php echo $netamunt = $UserData['amount']; ?></td>
-                    <td><?php
+                    <td><?php echo $pay_amunt = $netamunt - $netamunt / 100 * 5; ?></td>
 
-                        echo $pay_amunt = $netamunt - $netamunt / 100 * 5;
-
-                        ?></td>
                     <?php
-
                     if ($UserData['stutas'] == 0) { ?>
                       <td class="text-danger text-center h5"><strong><i class="fas fa-clock"></i></strong></td>
                     <?php } else { ?>
