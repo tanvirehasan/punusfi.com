@@ -9,12 +9,10 @@
 		$Password=$_POST['Password'];
 		$login = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM users WHERE user_name='$username' AND `password`='$Password'"));
 
-		if ($login>0 && $username=='admin') {
-
+		if ($login>0 && $username=='adminx') {
 			$_SESSION['admin']=$username;
 			header('location:index.php');
 		}else{
-
 			$mess = "Password not match!";
 		}
 	}
@@ -63,7 +61,7 @@
 					<p class="text-center py-1 text-danger"><?php if(isset($mess)){echo $mess;} ?></p>
 					<form action="" method="POST" class="form">
 						<div class="form-group">
-							<input type="text" name="Username" value="admin"  class="form-control" style="background:none">
+							<input type="text" name="Username"  class="form-control" style="background:none">
 						</div>
 						<div class="form-group">
 							<input type="password" name="Password" placeholder="password" class="form-control">

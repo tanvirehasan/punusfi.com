@@ -44,7 +44,7 @@ include 'inc/header.php';
                   <td><?php echo $UserData['amount']; ?></td>
                   <?php
 
-                  if ($UserData['PaymentStetus'] == 0) { ?>
+                  if ($UserData['stutas'] == 0) { ?>
                     <td class="text-danger text-center h5"><strong><i class="fas fa-clock"></i></strong></td>
                   <?php } else { ?>
                     <td class="text-success text-center h5"><strong><i class="fas fa-badge-check"></i></strong></td>
@@ -77,36 +77,49 @@ include 'inc/header.php';
                   <td>N0</td>
                   <td>User ID</td>
                   <td>Pay Method</td>
-                  <td>Phone No</td>
+                  <td>wallet/bank</td>
                   <td>USD</td>
-                  <td>TAKA</td>
+                  <td>Pay Amunt</td>
                   <td>Stetus</td>
                   <td>Action</td>
                 </tr>
               </thead>
               <tbody>
-                <?php $Users = mysqli_query($conn, "SELECT * FROM withdrawal WHERE PaymentStetus='0' ");
+                <?php $Users = mysqli_query($conn, "SELECT * FROM withdraw WHERE stutas='0' ");
                 $i = 1;
                 foreach ($Users as $UserData) { ?>
 
                   <tr>
                     <td><?php echo $i; ?></td>
-                    <td><?php echo $UserData['UserName']; ?></td>
-                    <td><?php echo $UserData['p_mathod']; ?></td>
-                    <td><?php echo $UserData['p_number']; ?></td>
-                    <td><?php echo $UserData['USDamount']; ?></td>
-                    <td><?php echo $UserData['f_total']; ?></td>
+                    <td><?php echo $UserData['username']; ?></td>
+                    <td><?php echo $UserData['withdrow_type']; ?></td>
+                    <td><?php 
+
+                      if ($UserData['withdrow_type'] == 'bank') {
+                        echo  $UserData['Bank_Name'].", ".$UserData['account_holder_name'] . ", " . $UserData['Bank_Account_Number'] . ", " .
+                          $UserData['Swift_Code'] . ", " . $UserData['Bank_City_Country'];        
+                      }else{
+                        echo $UserData['wallet_bank'];
+                      }
+                    
+                    ?></td>
+                    <td><?php echo $netamunt = $UserData['amount']; ?></td>
+                    <td><?php
+
+                        echo $pay_amunt = $netamunt - $netamunt / 100 * 5;
+
+                        ?></td>
                     <?php
 
-                    if ($UserData['PaymentStetus'] == 0) { ?>
+                    if ($UserData['stutas'] == 0) { ?>
                       <td class="text-danger text-center h5"><strong><i class="fas fa-clock"></i></strong></td>
                     <?php } else { ?>
                       <td class="text-success text-center h5"><strong><i class="fas fa-badge-check"></i></strong></td>
                     <?php } ?>
 
                     <td>
-                      <a href="statusupdate.php?statusid=<?php echo $UserData['Withdrawalid'] ?>&changeid=1" class="btn btn-sm btn-success">Approved</a>
-                      <a href="statusupdate.php?delete=<?php echo $UserData['Withdrawalid'] ?>" class="btn btn-sm btn-danger">Delete</a>
+                      <a href="statusupdate.php?statusid=<?php echo $UserData['wid'] ?>&changeid=1" class="btn btn-sm btn-success">Approved</a>
+                      <a href="statusupdate.php?delete=<?php echo $UserData['wid'] ?>" class="btn btn-sm btn-danger">Delete</a>
                     </td>
 
                   </tr>
