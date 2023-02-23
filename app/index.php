@@ -387,6 +387,25 @@ if ($totalsellA >= '1000' && $totalsellB >= '1000' && $totalsellC >= '1000') {
     }
 }
 
+if ($totalsellA >= '2500' && $totalsellB >= '2500' && $totalsellC >= '2500') {
+    if (rowcount('rank_and_bunus', " WHERE userid='$puser_name'") > 0) {
+        $conn->query("UPDATE rank_and_bunus SET rank_lavel='R2', rank_degicnation='Assistant Manager (AM)',rank_bunus='200', rank_date=NOW() where userid='$puser_name' ");
+    }
+}
+
+if ($totalsellA >= '5000' && $totalsellB >= '5000' && $totalsellC >= '5000') {
+    if (rowcount('rank_and_bunus', " WHERE userid='$puser_name'") > 0) {
+        $conn->query("UPDATE rank_and_bunus SET rank_lavel='R3', rank_degicnation='Manager (M)',rank_bunus='400', rank_date=NOW() where userid='$puser_name'");
+    }
+}
+
+if ($totalsellA >= '10000' && $totalsellB >= '10000' && $totalsellC >= '10000') {
+    if (rowcount('rank_and_bunus', " WHERE userid='$puser_name'") > 0) {
+        $conn->query("UPDATE rank_and_bunus SET rank_lavel='R3', rank_degicnation='Assintant general manager',rank_bunus='800', rank_date=NOW() where userid='$puser_name'");
+    }
+}
+
+
 ?>
 
 
