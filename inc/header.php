@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx" dir="ltr">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8">
@@ -40,7 +42,7 @@
     <!-- preloader end -->
     <header>
         <!-- header content begin -->
-        <div class="uk-section uk-padding-remove-vertical">
+        <div class="uk-section uk-padding-remove-vertical in-header-inner uk-background-cover uk-background-top-center" style="background-image: url(img/in-liquid-slide-bg.png);">
             <nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
                 <div class="uk-container" data-uk-navbar>
                     <div class="uk-navbar-left">
@@ -54,7 +56,7 @@
                             <ul class="uk-navbar-nav uk-visible@m">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="about.php">About Us</a></li>
-                                <li><a href="#">Investment</a></li>
+                                <li><a href="package.php">Investment</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="contact.php">Contact Us</a></li>
                             </ul>
@@ -64,7 +66,6 @@
                     <div class="uk-navbar-right">
                         <div class="uk-navbar-item uk-visible@m in-optional-nav">
                             <a href="app" class="uk-button uk-button-primary uk-border-rounded text-white">Create Account</a>
-                            <a href="app" class="uk-button uk-button-text"><i class="fas fa-user-circle"></i></a>
                         </div>
                     </div>
                 </div>
