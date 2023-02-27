@@ -10,7 +10,7 @@
                 <div class="col-md-6">
                     <h1 class="p-0 m-0"><span class="in-highlight">About</span> Us</h1>
                     <p>
-                        <b>Punus FinanceInternational (PFI)</b>
+                        <b>Punus Finance International (PFI)</b>
                         <i>we are dedicated to helping you succeed in the exciting world of forex trading. Our team of experts is here to support you every step of the way, with the latest technology, resources, and 24/7 customer service</i>
                         Digital platform for earn money, this is a 100% community development program. We are making a new community with the help of trading, block chain, smart contract and crypto currency.
                         Your ultimate destination for online forex trading. Our mission is
@@ -24,8 +24,6 @@
             </div>
         </div>
     </div>
-    <!-- section content end -->
-    <!-- section content begin -->
 </main>
 
 <?php include_once "inc/footer.php" ?>

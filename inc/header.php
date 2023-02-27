@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx" dir="ltr">
-
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8">
@@ -47,17 +46,17 @@
                     <div class="uk-navbar-left">
                         <div class="uk-navbar-item">
                             <!-- logo begin -->
-                            <a class="uk-logo" href="index.html">
+                            <a class="uk-logo" href="index.php">
                                 <img src="img/in-lazy.gif" data-src="img/logo.png" alt="logo" width="100px" data-uk-img>
                             </a>
                             <!-- logo end -->
                             <!-- navigation begin -->
                             <ul class="uk-navbar-nav uk-visible@m">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="about.php">About Us</a></li>
                                 <li><a href="#">Investment</a></li>
                                 <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="contact.php">Contact Us</a></li>
                             </ul>
                             <!-- navigation end -->
                         </div>
