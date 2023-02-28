@@ -58,7 +58,7 @@
                                 <li><a href="package.php">Investment</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="contact.php">Contact Us</a></li>
-                                <li class="d-sm-block d-md-none d-lg-none"><a href="app/singup.php" class="btn uk-button uk-button-primary uk-border-rounded p-0 mt-3" style="font-size:12px">Sign up</a></li>
+                                <li class="d-sm-block d-md-none d-lg-none"><a href="app/singup.php" class="btn uk-button uk-button-primary uk-border-rounded p-0 mt-3" style="font-size:12px">create account</a></li>
 
                             </ul>
                             <!-- navigation end -->
