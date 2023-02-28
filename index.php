@@ -4,9 +4,9 @@
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8">
-    <meta name="description" content="Premium HTML5 Template by Indonez">
-    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, vanilla javascript">
-    <meta name="author" content="Indonez">
+    <meta name="description" content="Punus Finance International (PFI) we are dedicated to helping you succeed in the exciting world of forex trading. Our team of experts is here to support you every step of the way, with the latest technology, resources, and 24/7 customer service">
+    <meta name="keywords" content="Forex investment platforms,Forex trading websites,Forex investment companies,Forex brokers,Online forex trading platforms,Forex investment opportunities,Best forex trading websites,Forex investment strategies,Forex investment tips,Forex market analysis websites">
+    <meta name="author" content="punusfi">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f3f5" />
     <!-- Site Properties -->
@@ -55,17 +55,19 @@
                             <ul class="uk-navbar-nav uk-visible@m">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="about.php">About Us</a></li>
-                                <li><a href="#">Investment</a></li>
+                                <li><a href="package.php">Investment</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="contact.php">Contact Us</a></li>
+                                <li class="d-sm-block d-md-none d-lg-none"><a href="app/singup.php" class="btn uk-button uk-button-primary uk-border-rounded p-0 mt-3" style="font-size:12px">Sign up</a></li>
+
                             </ul>
                             <!-- navigation end -->
                         </div>
                     </div>
                     <div class="uk-navbar-right">
                         <div class="uk-navbar-item uk-visible@m in-optional-nav">
-                            <a href="app" class="uk-button uk-button-primary uk-border-rounded text-white">Create Account</a>
-                            <a href="app" class="uk-button uk-button-text"><i class="fas fa-user-circle"></i></a>
+                            <a href="app/singup.php" class="uk-button uk-button-primary uk-border-rounded text-white me-3">Signup</a>
+                            <a href="app/login.php" class="uk-button uk-button-primary uk-border-rounded text-white">Log in</a>
                         </div>
                     </div>
                 </div>
