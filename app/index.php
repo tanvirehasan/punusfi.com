@@ -94,7 +94,7 @@ include "inc/navbar.php";
                         <div class="col-7">
                             <h3 class="mb-0">$ <?php
                                                 $gen = Genicom();
-                                                $totalicome = $gen + ROI()[0] + refericom();
+                                                $totalicome = $gen + ROI()[0] + refericom() + Rankwallet();
                                                 echo $netblance = $totalicome - withdrawal();
                                                 ?></h3>
 
