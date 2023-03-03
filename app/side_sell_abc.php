@@ -15,9 +15,9 @@ include_once "rank.php";
 <div class="modal-body bg-dark p-0 m-0">
     <table class="table">
         <tr>
-            <th>Team A <?= $total_acA; ?>/<?= $toactive_acA; ?> </th>
-            <th>Team B <?= $total_acB; ?>/<?= $toactive_acB; ?></th>
-            <th>Team C <?= $total_acC; ?>/<?= $toactive_acC; ?></th>
+            <th>Team A (<?= $total_acA; ?>/<?= $toactive_acA; ?>)</th>
+            <th>Team B (<?= $total_acB; ?>/<?= $toactive_acB; ?>)</th>
+            <th>Team C (<?= $total_acC; ?>/<?= $toactive_acC; ?>)</th>
         </tr>
         <tr>
             <td><?= $totalsellA ?></td>
