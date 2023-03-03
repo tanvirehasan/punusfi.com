@@ -15,16 +15,16 @@ include "inc/navbar.php";
                 <form action="" method="post">
                     <div class="mb-3">
                         <label class="form-label"> User Name</label>
-                        <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="username">
+                        <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="username" require>
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Amount </label>
-                        <input type="number" min="20" class="form-control form-control-lg bg-white bg-opacity-5" name="amount">
+                        <input type="number" min="20" class="form-control form-control-lg bg-white bg-opacity-5" name="amount" require>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label"> Select Payment type </label>
-                        <select name="payment_type" id="" class="form-control form-control-lg bg-white bg-opacity-5">
+                        <select name="payment_type" id="" class="form-control form-control-lg bg-white bg-opacity-5" require>
                             <option value="usdt" class="text-dark">USDT</option>
                             <option value="btc" class="text-dark">BTC</option>
                         </select>
@@ -32,7 +32,7 @@ include "inc/navbar.php";
 
                     <div class="mb-3">
                         <label class="form-label"> Tanx ID/Payment Proof </label>
-                        <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="tanxid">
+                        <input type="text" class="form-control form-control-lg bg-white bg-opacity-5" name="tanxid" require>
                     </div>
                     <input type="submit" value="Submit" name="addmoney" class="btn btn-outline-theme btn-lg d-block mt-5 ">
                 </form>

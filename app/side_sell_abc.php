@@ -13,16 +13,28 @@ include_once "rank.php";
 </div>
 
 <div class="modal-body bg-dark p-0 m-0">
-    <table class="table">
+    <table class="table table-bordered">
         <tr>
-            <th>Team A <p class="text-danger">(<?= $total_acA; ?>/<?= $toactive_acA; ?>)</p></th>
-            <th>Team B <p class="text-danger">(<?= $total_acB; ?>/<?= $toactive_acB; ?>)</p></th>
-            <th>Team C <p class="text-danger">(<?= $total_acC; ?>/<?= $toactive_acC; ?>)</p></th>
+            <th class="text-danger">Team A</th>
+            <th class="text-danger">Team B</th>
+            <th class="text-danger">Team C</th>
         </tr>
         <tr>
-            <td><?= $totalsellA ?></td>
-            <td><?= $totalsellB; ?></td>
-            <td><?= $totalsellC; ?></td>
+            <td>
+                <?= $total_acA; ?>/<?= $toactive_acA; ?> Users
+            </td>
+            <td>
+                <?= $total_acB; ?>/<?= $toactive_acB; ?> Users
+            </td>
+            <td>
+                <?= $total_acC; ?>/<?= $toactive_acC; ?> Users
+            </td>
+
+        </tr>
+        <tr>
+            <td>$ <?= $totalsellA ?></td>
+            <td>$ <?= $totalsellB; ?></td>
+            <td>$ <?= $totalsellC; ?></td>
         </tr>
 
     </table>
