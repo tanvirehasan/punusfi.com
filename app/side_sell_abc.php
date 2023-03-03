@@ -7,9 +7,9 @@ $puser_name = $_GET['user'];
 include_once "rank.php";
 ?>
 
-<div class="modal-header bg-dark">
-    <h6>
-        <a class="nav-link">All User/Active User | Team's Sales ($) </a>
+<div class="modal-header bg-dark text-center">
+    <h6 class="p-0 m-0">
+        <a class="nav-link p-0 m-0">All User/Active User | Team's Sales ($) </a>
     </h6>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
