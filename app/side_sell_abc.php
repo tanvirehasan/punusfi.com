@@ -1,10 +1,10 @@
 <?php
-    
-    include_once "config/conn.php";
-    include_once "config/function.php";
 
-    $puser_name = $_GET['user'];
-    include_once "rank.php";    
+include_once "config/conn.php";
+include_once "config/function.php";
+
+$puser_name = $_GET['user'];
+include_once "rank.php";
 ?>
 
 <div class="modal-header">
@@ -15,13 +15,12 @@
 <div class="modal-body bg-dark p-0 m-0">
     <table class="table">
         <tr>
-            <th>Team A</th>
-            <th>Team B</th>
-            <th>Team C</th>
+            <th>Team A <?= $total_acA; ?>/<?= $toactive_acA; ?> </th>
+            <th>Team B <?= $total_acB; ?>/<?= $toactive_acB; ?></th>
+            <th>Team C <?= $total_acC; ?>/<?= $toactive_acC; ?></th>
         </tr>
-
         <tr>
-            <td><?= $totalsellA; ?></td>
+            <td><?= $totalsellA ?></td>
             <td><?= $totalsellB; ?></td>
             <td><?= $totalsellC; ?></td>
         </tr>

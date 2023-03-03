@@ -27,9 +27,9 @@ if (isset($_POST['profile_update'])) {
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto ">
             <h1 class="display-4">Profile!</h1>
             <?php if (isset($mess)) {
-                echo  $mess;             
+                echo  $mess;
             }
-                echo RankData('rank_degicnation');         
+            echo RankData('rank_degicnation');
             ?>
         </div>
         <div class="col-md-3">
@@ -76,6 +76,12 @@ if (isset($_POST['profile_update'])) {
                             <p class="p-0 m-0 fs-3">Refer by:</p>
                         </td>
                         <td><input type="text" disabled class="form-control border-0 fs-3" value="<?= UserData('refer_id') ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="p-0 m-0 fs-3">Placement by:</p>
+                        </td>
+                        <td><input type="text" disabled class="form-control border-0 fs-3" value="<?= UserData('placemnet_id'). "-" . UserData('placement') ?>"></td>
                     </tr>
 
                     <tr>
