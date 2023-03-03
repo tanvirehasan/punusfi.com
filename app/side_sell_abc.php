@@ -21,13 +21,13 @@ include_once "rank.php";
         </tr>
         <tr>
             <td>
-                <?= $total_acA; ?>/<?= $toactive_acA; ?> Users
+                <?= $total_acA; ?>/<?= $toactive_acA; ?>
             </td>
             <td>
-                <?= $total_acB; ?>/<?= $toactive_acB; ?> Users
+                <?= $total_acB; ?>/<?= $toactive_acB; ?>
             </td>
             <td>
-                <?= $total_acC; ?>/<?= $toactive_acC; ?> Users
+                <?= $total_acC; ?>/<?= $toactive_acC; ?>
             </td>
 
         </tr>
