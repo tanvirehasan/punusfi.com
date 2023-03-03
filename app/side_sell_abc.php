@@ -8,7 +8,7 @@ include_once "rank.php";
 ?>
 
 <div class="modal-header bg-dark">
-    <img src="https://punusfi.com/img/logo.png" width="60px">
+    <h3>All Users/Active Users | Team's Sales ($) </h3>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 
