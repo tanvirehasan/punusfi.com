@@ -8,7 +8,9 @@ include_once "rank.php";
 ?>
 
 <div class="modal-header bg-dark">
-    <h5 class="nav-link">All User/Active User | Team's Sales ($) </h5>
+    <h6>
+        <a class="nav-link">All User/Active User | Team's Sales ($) </a>
+    </h6>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 
