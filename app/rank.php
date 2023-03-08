@@ -39,7 +39,7 @@ $totalsellB = 0;
 $totalsellC = 0;
 
 
-$data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='A' and stutas='1' ");
+$data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='A'");
 if ($data->num_rows > 0) {
     $row = $data->fetch_object();
     $price = Packageinfo($row->packageid);
@@ -292,7 +292,7 @@ if ($data->num_rows > 0) {
                 // B ======================================
 
 
-                $data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='B' and stutas='1' ");
+                $data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='B'");
                 if ($data->num_rows > 0) {
                     $row = $data->fetch_object();
                     $price = Packageinfo($row->packageid);
@@ -542,7 +542,7 @@ if ($data->num_rows > 0) {
 
 
 
-                $data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='C' and stutas='1' ");
+                $data = $conn->query("SELECT * FROM users where placemnet_id='$puser_name' and placement='C'");
                 if ($data->num_rows > 0) {
                     $row = $data->fetch_object();
                     $price = Packageinfo($row->packageid);
